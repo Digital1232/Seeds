@@ -1476,8 +1476,9 @@ function submitForm(){
     const displayEl = document.getElementById('displayRegId');
     if(displayEl) displayEl.textContent = regId;
 
-    // Collect form data
-    const payload = {
+    const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyMijgzHIJT318q2ofblcuyTr9S772_LJ9YNok5dzcTOYyIpzuj13q9rcdArwS3tWDq/exec';
+
+    const baseParams = {
         regId:         regId,
         name:          document.getElementById('name').value.trim(),
         mobile:        document.getElementById('mobile').value.trim(),
@@ -1489,24 +1490,32 @@ function submitForm(){
         transactionId: document.getElementById('transactionId').value.trim()
     };
 
-    // Submit to Google Sheets via GET (avoids CORS issues)
-    const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyMijgzHIJT318q2ofblcuyTr9S772_LJ9YNok5dzcTOYyIpzuj13q9rcdArwS3tWDq/exec';
-    const params = new URLSearchParams({
-        regId:         payload.regId,
-        name:          payload.name,
-        mobile:        payload.mobile,
-        batch:         payload.batch,
-        course:        payload.course,
-        family:        payload.family,
-        volunteer:     payload.volunteer,
-        tshirt:        payload.tshirt,
-        transactionId: payload.transactionId
-    });
-    // Use no-cors fetch GET — Apps Script doGet handles this without CORS errors
-    fetch(SHEET_URL + '?' + params.toString(), { method: 'GET', mode: 'no-cors' })
-        .catch(err => console.warn('Sheet submission error:', err));
+    const screenshotFile = document.getElementById('paymentScreenshot').files[0];
 
-    // Proceed to success screen regardless
+    function sendToSheet(extraParams) {
+        const params = new URLSearchParams(Object.assign({}, baseParams, extraParams));
+        fetch(SHEET_URL + '?' + params.toString(), { method: 'GET', mode: 'no-cors' })
+            .catch(err => console.warn('Sheet error:', err));
+    }
+
+    if (screenshotFile) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            // Strip the base64 header (e.g. "data:image/jpeg;base64,")
+            const base64Full = e.target.result;
+            const base64Data = base64Full.split(',')[1];
+            sendToSheet({
+                fileData: base64Data,
+                fileName: screenshotFile.name,
+                fileType: screenshotFile.type
+            });
+        };
+        reader.readAsDataURL(screenshotFile);
+    } else {
+        sendToSheet({});
+    }
+
+    // Proceed to success screen immediately
     setStepUI(3);
     launchConfetti();
     window.scrollTo({top: document.getElementById('registration').offsetTop - 80, behavior:'smooth'});
