@@ -1,14 +1,18 @@
 <!doctype html>
 <html lang="en">
- <head><script src="/_sdk/telemetry_sdk.js"></script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alumni Homecoming 2026</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&amp;family=Playfair+Display:wght@700;800&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
+
+<head>
+    <script src="/_sdk/telemetry_sdk.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Homecoming 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&amp;family=Playfair+Display:wght@700;800&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
         :root {
             --royal: #0D47A1;
             --royal-dark: #0a3880;
@@ -33,9 +37,17 @@
             --blue-200: #bfdbfe;
         }
 
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             font-family: 'DM Sans', sans-serif;
@@ -47,113 +59,408 @@
         }
 
         /* ===== UTILITIES ===== */
-        .hidden { display: none !important; }
-        .text-royal { color: var(--royal); }
-        .text-gold { color: var(--gold); }
-        .bg-royal { background-color: var(--royal); }
-        .font-bold { font-weight: 700; }
-        .font-semibold { font-weight: 600; }
-        .italic { font-style: italic; }
-        .text-center { text-align: center; }
-        .text-sm { font-size: 0.875rem; }
-        .text-xs { font-size: 0.75rem; }
-        .text-lg { font-size: 1.125rem; }
-        .text-xl { font-size: 1.25rem; }
-        .text-2xl { font-size: 1.5rem; }
-        .text-3xl { font-size: 1.875rem; }
-        .text-4xl { font-size: 2.25rem; }
-        .text-5xl { font-size: 3rem; }
-        .text-6xl { font-size: 3.75rem; }
-        .grid { display: grid; }
-        .flex { display: flex; }
-        .items-center { align-items: center; }
-        .items-start { align-items: flex-start; }
-        .justify-center { justify-content: center; }
-        .justify-between { justify-content: space-between; }
-        .justify-end { justify-content: flex-end; }
-        .gap-2 { gap: 0.5rem; }
-        .gap-3 { gap: 0.75rem; }
-        .gap-4 { gap: 1rem; }
-        .gap-6 { gap: 1.5rem; }
-        .gap-8 { gap: 2rem; }
-        .flex-col { flex-direction: column; }
-        .flex-wrap { flex-wrap: wrap; }
-        .w-full { width: 100%; }
-        .max-w-sm { max-width: 24rem; }
-        .max-w-md { max-width: 28rem; }
-        .max-w-lg { max-width: 32rem; }
-        .max-w-2xl { max-width: 42rem; }
-        .max-w-4xl { max-width: 56rem; }
-        .max-w-6xl { max-width: 72rem; }
-        .max-w-7xl { max-width: 80rem; }
-        .mx-auto { margin-left: auto; margin-right: auto; }
-        .mb-1 { margin-bottom: 0.25rem; }
-        .mb-2 { margin-bottom: 0.5rem; }
-        .mb-3 { margin-bottom: 0.75rem; }
-        .mb-4 { margin-bottom: 1rem; }
-        .mb-6 { margin-bottom: 1.5rem; }
-        .mb-8 { margin-bottom: 2rem; }
-        .mt-1 { margin-top: 0.25rem; }
-        .mt-2 { margin-top: 0.5rem; }
-        .p-4 { padding: 1rem; }
-        .p-6 { padding: 1.5rem; }
-        .px-4 { padding-left: 1rem; padding-right: 1rem; }
-        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
-        .px-8 { padding-left: 2rem; padding-right: 2rem; }
-        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
-        .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
-        .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
-        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
-        .py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
-        .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
-        .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
-        .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
-        .pt-24 { padding-top: 6rem; }
-        .rounded-full { border-radius: 9999px; }
-        .rounded-xl { border-radius: 0.75rem; }
-        .rounded-2xl { border-radius: 1rem; }
-        .rounded-3xl { border-radius: 1.5rem; }
-        .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1); }
-        .shadow-xl { box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1); }
-        .shadow-inner { box-shadow: inset 0 2px 4px 0 rgba(0,0,0,.05); }
-        .outline-none { outline: none; }
-        .transition { transition: all 0.2s ease; }
-        .overflow-hidden { overflow: hidden; }
-        .relative { position: relative; }
-        .absolute { position: absolute; }
-        .inset-0 { top:0; right:0; bottom:0; left:0; }
-        .z-10 { z-index: 10; }
-        .z-20 { z-index: 20; }
-        .z-50 { z-index: 50; }
-        .border { border-width: 1px; border-style: solid; }
-        .border-gray-300 { border-color: var(--gray-300); }
-        .border-blue-200 { border-color: var(--blue-200); }
-        .border-blue-100 { border-color: var(--blue-100); }
-        .list-disc { list-style-type: disc; }
-        .pl-5 { padding-left: 1.25rem; }
-        .space-y-1 > * + * { margin-top: 0.25rem; }
-        .tracking-widest { letter-spacing: 0.1em; }
-        .uppercase { text-transform: uppercase; }
-        .block { display: block; }
-        .backdrop-blur-sm { backdrop-filter: blur(4px); }
-        .cursor-pointer { cursor: pointer; }
-        .object-cover { object-fit: cover; }
-        .select-none { user-select: none; }
+        .hidden {
+            display: none !important;
+        }
+
+        .text-royal {
+            color: var(--royal);
+        }
+
+        .text-gold {
+            color: var(--gold);
+        }
+
+        .bg-royal {
+            background-color: var(--royal);
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+
+        .font-semibold {
+            font-weight: 600;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-sm {
+            font-size: 0.875rem;
+        }
+
+        .text-xs {
+            font-size: 0.75rem;
+        }
+
+        .text-lg {
+            font-size: 1.125rem;
+        }
+
+        .text-xl {
+            font-size: 1.25rem;
+        }
+
+        .text-2xl {
+            font-size: 1.5rem;
+        }
+
+        .text-3xl {
+            font-size: 1.875rem;
+        }
+
+        .text-4xl {
+            font-size: 2.25rem;
+        }
+
+        .text-5xl {
+            font-size: 3rem;
+        }
+
+        .text-6xl {
+            font-size: 3.75rem;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .items-start {
+            align-items: flex-start;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .justify-end {
+            justify-content: flex-end;
+        }
+
+        .gap-2 {
+            gap: 0.5rem;
+        }
+
+        .gap-3 {
+            gap: 0.75rem;
+        }
+
+        .gap-4 {
+            gap: 1rem;
+        }
+
+        .gap-6 {
+            gap: 1.5rem;
+        }
+
+        .gap-8 {
+            gap: 2rem;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .max-w-sm {
+            max-width: 24rem;
+        }
+
+        .max-w-md {
+            max-width: 28rem;
+        }
+
+        .max-w-lg {
+            max-width: 32rem;
+        }
+
+        .max-w-2xl {
+            max-width: 42rem;
+        }
+
+        .max-w-4xl {
+            max-width: 56rem;
+        }
+
+        .max-w-6xl {
+            max-width: 72rem;
+        }
+
+        .max-w-7xl {
+            max-width: 80rem;
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .mb-1 {
+            margin-bottom: 0.25rem;
+        }
+
+        .mb-2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .mb-3 {
+            margin-bottom: 0.75rem;
+        }
+
+        .mb-4 {
+            margin-bottom: 1rem;
+        }
+
+        .mb-6 {
+            margin-bottom: 1.5rem;
+        }
+
+        .mb-8 {
+            margin-bottom: 2rem;
+        }
+
+        .mt-1 {
+            margin-top: 0.25rem;
+        }
+
+        .mt-2 {
+            margin-top: 0.5rem;
+        }
+
+        .p-4 {
+            padding: 1rem;
+        }
+
+        .p-6 {
+            padding: 1.5rem;
+        }
+
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .px-6 {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        .px-8 {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .py-2 {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        .py-3 {
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+
+        .py-4 {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .py-8 {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .py-10 {
+            padding-top: 2.5rem;
+            padding-bottom: 2.5rem;
+        }
+
+        .py-12 {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .py-16 {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        .py-20 {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+
+        .pt-24 {
+            padding-top: 6rem;
+        }
+
+        .rounded-full {
+            border-radius: 9999px;
+        }
+
+        .rounded-xl {
+            border-radius: 0.75rem;
+        }
+
+        .rounded-2xl {
+            border-radius: 1rem;
+        }
+
+        .rounded-3xl {
+            border-radius: 1.5rem;
+        }
+
+        .shadow-lg {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -4px rgba(0, 0, 0, .1);
+        }
+
+        .shadow-xl {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, .1), 0 8px 10px -6px rgba(0, 0, 0, .1);
+        }
+
+        .shadow-inner {
+            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .05);
+        }
+
+        .outline-none {
+            outline: none;
+        }
+
+        .transition {
+            transition: all 0.2s ease;
+        }
+
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .inset-0 {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .z-10 {
+            z-index: 10;
+        }
+
+        .z-20 {
+            z-index: 20;
+        }
+
+        .z-50 {
+            z-index: 50;
+        }
+
+        .border {
+            border-width: 1px;
+            border-style: solid;
+        }
+
+        .border-gray-300 {
+            border-color: var(--gray-300);
+        }
+
+        .border-blue-200 {
+            border-color: var(--blue-200);
+        }
+
+        .border-blue-100 {
+            border-color: var(--blue-100);
+        }
+
+        .list-disc {
+            list-style-type: disc;
+        }
+
+        .pl-5 {
+            padding-left: 1.25rem;
+        }
+
+        .space-y-1>*+* {
+            margin-top: 0.25rem;
+        }
+
+        .tracking-widest {
+            letter-spacing: 0.1em;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        .block {
+            display: block;
+        }
+
+        .backdrop-blur-sm {
+            backdrop-filter: blur(4px);
+        }
+
+        .cursor-pointer {
+            cursor: pointer;
+        }
+
+        .object-cover {
+            object-fit: cover;
+        }
+
+        .select-none {
+            user-select: none;
+        }
 
         /* ===== NAVBAR ===== */
         #navbar {
             position: fixed;
-            top: 0; left: 0; right: 0;
+            top: 0;
+            left: 0;
+            right: 0;
             z-index: 100;
             transition: all 0.4s ease;
             padding: 1rem 1.5rem;
         }
+
         #navbar.scrolled {
-            background: rgba(13,71,161,0.95);
+            background: rgba(13, 71, 161, 0.95);
             backdrop-filter: blur(20px);
             padding: 0.75rem 1.5rem;
-            box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
         }
+
         .nav-inner {
             max-width: 80rem;
             margin: 0 auto;
@@ -161,22 +468,53 @@
             align-items: center;
             justify-content: space-between;
         }
+
         .nav-logo {
             display: flex;
             align-items: center;
             gap: 0.75rem;
             text-decoration: none;
         }
+
         .nav-logo-img {
             height: 4rem;
             width: auto;
             object-fit: contain;
         }
-        .nav-logo-text { color: white; font-weight: 700; font-size: 1.1rem; line-height: 1.2; }
-        .nav-logo-sub { color: var(--gold); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
-        .nav-links { display: flex; align-items: center; gap: 2rem; }
-        .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
-        .nav-links a:hover { color: var(--gold); }
+
+        .nav-logo-text {
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            line-height: 1.2;
+        }
+
+        .nav-logo-sub {
+            color: var(--gold);
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
         .nav-cta {
             background: linear-gradient(135deg, var(--gold), var(--gold-light));
             color: var(--royal) !important;
@@ -184,13 +522,48 @@
             border-radius: 9999px;
             font-weight: 700 !important;
             font-size: 0.875rem !important;
-            box-shadow: 0 0 20px rgba(212,175,55,0.4);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
         }
-        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 0 30px rgba(212,175,55,0.6); }
-        #mobile-menu-btn { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
-        #mobile-menu { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(13,71,161,0.98); backdrop-filter: blur(20px); padding: 1.5rem; flex-direction: column; gap: 1rem; }
-        #mobile-menu.open { display: flex; }
-        #mobile-menu a { color: rgba(255,255,255,0.9); text-decoration: none; font-size: 1rem; font-weight: 500; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+        }
+
+        #mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        #mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(13, 71, 161, 0.98);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        #mobile-menu.open {
+            display: flex;
+        }
+
+        #mobile-menu a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
         /* ===== HERO ===== */
         #hero {
@@ -201,25 +574,30 @@
             justify-content: center;
             overflow: hidden;
         }
+
         #hero-bg-img {
             position: absolute;
             inset: 0;
-            width: 100%; height: 100%;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             z-index: 0;
         }
+
         .hero-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(10,14,26,0.85) 0%, rgba(13,71,161,0.7) 50%, rgba(10,14,26,0.85) 100%);
+            background: linear-gradient(135deg, rgba(10, 14, 26, 0.85) 0%, rgba(13, 71, 161, 0.7) 50%, rgba(10, 14, 26, 0.85) 100%);
             z-index: 1;
         }
+
         #particles-canvas {
             position: absolute;
             inset: 0;
             z-index: 2;
             pointer-events: none;
         }
+
         .hero-content {
             position: relative;
             z-index: 3;
@@ -228,12 +606,13 @@
             max-width: 56rem;
             margin: 0 auto;
         }
+
         .hero-badge {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(212,175,55,0.15);
-            border: 1px solid rgba(212,175,55,0.4);
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid rgba(212, 175, 55, 0.4);
             color: var(--gold);
             padding: 0.4rem 1rem;
             border-radius: 9999px;
@@ -244,6 +623,7 @@
             margin-bottom: 1.5rem;
             backdrop-filter: blur(10px);
         }
+
         .hero-title {
             font-family: 'Playfair Display', serif;
             font-size: clamp(2.5rem, 7vw, 5rem);
@@ -251,21 +631,26 @@
             color: white;
             line-height: 1.1;
             margin-bottom: 0.5rem;
-            text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
         }
-        .hero-title span { color: var(--gold); }
+
+        .hero-title span {
+            color: var(--gold);
+        }
+
         .hero-tagline {
             font-size: clamp(1rem, 2.5vw, 1.4rem);
-            color: rgba(255,255,255,0.85);
+            color: rgba(255, 255, 255, 0.85);
             margin-bottom: 1rem;
             font-weight: 300;
         }
+
         .hero-date-badge {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.25);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.25);
             color: white;
             padding: 0.5rem 1.25rem;
             border-radius: 9999px;
@@ -274,7 +659,10 @@
             margin-bottom: 2.5rem;
             backdrop-filter: blur(10px);
         }
-        .hero-date-badge i { color: var(--gold); }
+
+        .hero-date-badge i {
+            color: var(--gold);
+        }
 
         /* Countdown */
         .countdown-wrapper {
@@ -284,15 +672,17 @@
             margin-bottom: 2.5rem;
             flex-wrap: wrap;
         }
+
         .countdown-item {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 1rem;
             padding: 1rem 1.25rem;
             min-width: 80px;
             text-align: center;
         }
+
         .countdown-number {
             font-size: 2.25rem;
             font-weight: 800;
@@ -300,6 +690,7 @@
             line-height: 1;
             display: block;
         }
+
         .countdown-label {
             font-size: 0.7rem;
             color: var(--gold);
@@ -308,12 +699,14 @@
             text-transform: uppercase;
             margin-top: 0.25rem;
         }
+
         .hero-cta-group {
             display: flex;
             justify-content: center;
             gap: 1rem;
             flex-wrap: wrap;
         }
+
         .btn-primary {
             background: linear-gradient(135deg, var(--gold), var(--gold-light));
             color: var(--royal);
@@ -323,22 +716,27 @@
             font-size: 1rem;
             border: none;
             cursor: pointer;
-            box-shadow: 0 0 30px rgba(212,175,55,0.4);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
         }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 0 50px rgba(212,175,55,0.6); }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 50px rgba(212, 175, 55, 0.6);
+        }
+
         .btn-secondary {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             color: white;
             padding: 0.875rem 2rem;
             border-radius: 9999px;
             font-weight: 600;
             font-size: 1rem;
-            border: 1px solid rgba(255,255,255,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             cursor: pointer;
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
@@ -347,7 +745,12 @@
             align-items: center;
             gap: 0.5rem;
         }
-        .btn-secondary:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
         .hero-scroll-hint {
             position: absolute;
             bottom: 2rem;
@@ -358,21 +761,35 @@
             flex-direction: column;
             align-items: center;
             gap: 0.5rem;
-            color: rgba(255,255,255,0.5);
+            color: rgba(255, 255, 255, 0.5);
             font-size: 0.75rem;
             animation: bounce 2s infinite;
         }
-        @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(-8px)} }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0)
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(-8px)
+            }
+        }
 
         /* ===== SECTION SHARED ===== */
-        .section-wrapper { padding: 5rem 1.5rem; }
+        .section-wrapper {
+            padding: 5rem 1.5rem;
+        }
+
         .section-tag {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(13,71,161,0.1);
+            background: rgba(13, 71, 161, 0.1);
             color: var(--royal);
-            border: 1px solid rgba(13,71,161,0.2);
+            border: 1px solid rgba(13, 71, 161, 0.2);
             padding: 0.35rem 1rem;
             border-radius: 9999px;
             font-size: 0.75rem;
@@ -381,6 +798,7 @@
             text-transform: uppercase;
             margin-bottom: 1rem;
         }
+
         .section-title {
             font-family: 'Playfair Display', serif;
             font-size: clamp(1.75rem, 4vw, 2.75rem);
@@ -389,6 +807,7 @@
             line-height: 1.2;
             margin-bottom: 1rem;
         }
+
         .section-subtitle {
             font-size: 1.05rem;
             color: var(--gray-600);
@@ -396,6 +815,7 @@
             margin: 0 auto;
             line-height: 1.7;
         }
+
         .section-divider {
             width: 4rem;
             height: 4px;
@@ -405,35 +825,53 @@
         }
 
         /* ===== WELCOME ===== */
-        #welcome { background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 50%, #fffbf0 100%); }
+        #welcome {
+            background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 50%, #fffbf0 100%);
+        }
+
         .welcome-card {
             background: white;
             border-radius: 1.5rem;
             padding: 3rem;
-            box-shadow: 0 20px 60px rgba(13,71,161,0.1);
-            border: 1px solid rgba(13,71,161,0.1);
+            box-shadow: 0 20px 60px rgba(13, 71, 161, 0.1);
+            border: 1px solid rgba(13, 71, 161, 0.1);
             max-width: 56rem;
             margin: 2.5rem auto 0;
             position: relative;
             overflow: hidden;
         }
+
         .welcome-card::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0;
+            top: 0;
+            left: 0;
+            right: 0;
             height: 4px;
             background: linear-gradient(90deg, var(--royal), var(--gold));
         }
+
         .welcome-icon {
-            width: 5rem; height: 5rem;
+            width: 5rem;
+            height: 5rem;
             background: linear-gradient(135deg, var(--royal), var(--royal-light));
             border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 2rem; color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
             margin: 0 auto 1.5rem;
-            box-shadow: 0 10px 30px rgba(13,71,161,0.3);
+            box-shadow: 0 10px 30px rgba(13, 71, 161, 0.3);
         }
-        .welcome-body { font-size: 1.05rem; color: var(--gray-700); line-height: 1.8; margin-bottom: 1.5rem; }
+
+        .welcome-body {
+            font-size: 1.05rem;
+            color: var(--gray-700);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
         .welcome-quote {
             font-style: italic;
             color: var(--royal);
@@ -444,20 +882,35 @@
         }
 
         /* ===== HIGHLIGHTS ===== */
-        #highlights { background: linear-gradient(135deg, #0a0e1a 0%, #0D47A1 50%, #0a0e1a 100%); }
-        #highlights .section-tag { background: rgba(212,175,55,0.15); color: var(--gold); border-color: rgba(212,175,55,0.3); }
-        #highlights .section-title { color: white; }
-        #highlights .section-subtitle { color: rgba(255,255,255,0.7); }
+        #highlights {
+            background: linear-gradient(135deg, #0a0e1a 0%, #0D47A1 50%, #0a0e1a 100%);
+        }
+
+        #highlights .section-tag {
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        #highlights .section-title {
+            color: white;
+        }
+
+        #highlights .section-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
         .highlights-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
             margin-top: 3rem;
         }
+
         .highlight-card {
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 1.25rem;
             padding: 2rem 1.5rem;
             text-align: center;
@@ -465,35 +918,65 @@
             position: relative;
             overflow: hidden;
         }
+
         .highlight-card::before {
             content: '';
             position: absolute;
-            bottom: 0; left: 0; right: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
             height: 2px;
             background: linear-gradient(90deg, var(--royal), var(--gold));
             transform: scaleX(0);
             transition: transform 0.4s ease;
         }
-        .highlight-card:hover { transform: translateY(-8px); background: rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
-        .highlight-card:hover::before { transform: scaleX(1); }
+
+        .highlight-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .highlight-card:hover::before {
+            transform: scaleX(1);
+        }
+
         .highlight-icon {
-            width: 3.5rem; height: 3.5rem;
+            width: 3.5rem;
+            height: 3.5rem;
             border-radius: 1rem;
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 1.5rem;
             margin: 0 auto 1rem;
         }
-        .highlight-title { color: white; font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; }
-        .highlight-desc { color: rgba(255,255,255,0.6); font-size: 0.85rem; line-height: 1.6; }
+
+        .highlight-title {
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-desc {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
 
         /* ===== GALLERY ===== */
-        #gallery { background: var(--gray-50); }
+        #gallery {
+            background: var(--gray-50);
+        }
+
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
             margin-top: 2.5rem;
         }
+
         .gallery-item {
             position: relative;
             border-radius: 1rem;
@@ -501,56 +984,108 @@
             aspect-ratio: 1;
             cursor: pointer;
         }
+
         .gallery-item img {
-            width: 100%; height: 100%;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             transition: transform 0.4s ease;
         }
-        .gallery-item:hover img { transform: scale(1.08); }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
         .gallery-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top, rgba(13,71,161,0.85), transparent);
+            background: linear-gradient(to top, rgba(13, 71, 161, 0.85), transparent);
             opacity: 0;
             transition: opacity 0.4s ease;
             display: flex;
             align-items: flex-end;
             padding: 1rem;
         }
-        .gallery-item:hover .gallery-overlay { opacity: 1; }
-        .gallery-overlay-text { color: white; font-weight: 600; font-size: 0.9rem; }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay-text {
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
 
         /* ===== STATS ===== */
-        #stats { background: linear-gradient(135deg, var(--royal) 0%, var(--royal-dark) 100%); }
-        #stats .section-tag { background: rgba(212,175,55,0.15); color: var(--gold); border-color: rgba(212,175,55,0.3); }
-        #stats .section-title { color: white; }
-        #stats .section-subtitle { color: rgba(255,255,255,0.75); }
+        #stats {
+            background: linear-gradient(135deg, var(--royal) 0%, var(--royal-dark) 100%);
+        }
+
+        #stats .section-tag {
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        #stats .section-title {
+            color: white;
+        }
+
+        #stats .section-subtitle {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 1.5rem;
             margin-top: 3rem;
         }
+
         .stat-card {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.15);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             border-radius: 1.25rem;
             padding: 2rem 1.5rem;
             text-align: center;
         }
-        .stat-icon { font-size: 2rem; margin-bottom: 0.75rem; }
-        .stat-number { font-size: 2.75rem; font-weight: 800; color: white; line-height: 1; }
-        .stat-number span { color: var(--gold); }
-        .stat-label { color: rgba(255,255,255,0.7); font-size: 0.9rem; font-weight: 500; margin-top: 0.5rem; }
+
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .stat-number {
+            font-size: 2.75rem;
+            font-weight: 800;
+            color: white;
+            line-height: 1;
+        }
+
+        .stat-number span {
+            color: var(--gold);
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
 
         /* ===== COUNTDOWN SECTION ===== */
-        #countdown-section { background: linear-gradient(135deg, #fffbf0 0%, #fff 50%, #f0f4ff 100%); }
+        #countdown-section {
+            background: linear-gradient(135deg, #fffbf0 0%, #fff 50%, #f0f4ff 100%);
+        }
+
         .countdown-section-inner {
             max-width: 42rem;
             margin: 0 auto;
             text-align: center;
         }
+
         .countdown-section-timer {
             display: flex;
             justify-content: center;
@@ -558,6 +1093,7 @@
             flex-wrap: wrap;
             margin: 2.5rem 0;
         }
+
         .cs-item {
             background: white;
             border: 1px solid var(--blue-200);
@@ -565,21 +1101,49 @@
             padding: 1.5rem 1.75rem;
             min-width: 100px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(13,71,161,0.1);
+            box-shadow: 0 10px 30px rgba(13, 71, 161, 0.1);
         }
-        .cs-number { font-size: 3rem; font-weight: 800; color: var(--royal); line-height: 1; }
-        .cs-label { font-size: 0.75rem; color: var(--gray-500); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.25rem; }
+
+        .cs-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--royal);
+            line-height: 1;
+        }
+
+        .cs-label {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 0.25rem;
+        }
 
         /* ===== REGISTRATION SECTION ===== */
-        #registration { background: linear-gradient(135deg, #0a0e1a 0%, #0D47A1 50%, #0a0e1a 100%); }
-        #registration .section-tag { background: rgba(212,175,55,0.15); color: var(--gold); border-color: rgba(212,175,55,0.3); }
-        #registration .section-title { color: white; }
-        #registration .section-subtitle { color: rgba(255,255,255,0.7); }
+        #registration {
+            background: linear-gradient(135deg, #0a0e1a 0%, #0D47A1 50%, #0a0e1a 100%);
+        }
+
+        #registration .section-tag {
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        #registration .section-title {
+            color: white;
+        }
+
+        #registration .section-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
         .form-card {
             background: white;
             border-radius: 1.5rem;
             padding: 2.5rem;
-            box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
             max-width: 56rem;
             margin: 2.5rem auto 0;
         }
@@ -592,6 +1156,7 @@
             margin-bottom: 2.5rem;
             gap: 0;
         }
+
         .step-item {
             display: flex;
             flex-direction: column;
@@ -599,35 +1164,74 @@
             gap: 0.35rem;
             position: relative;
         }
+
         .step-circle {
-            width: 2.5rem; height: 2.5rem;
+            width: 2.5rem;
+            height: 2.5rem;
             border-radius: 50%;
             background: var(--gray-200);
             color: var(--gray-500);
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-weight: 700;
             font-size: 0.9rem;
             transition: all 0.3s ease;
             z-index: 1;
         }
-        .step-item.active .step-circle { background: var(--royal); color: white; box-shadow: 0 0 0 4px rgba(13,71,161,0.2); }
-        .step-item.done .step-circle { background: var(--green-500); color: white; }
-        .step-label { font-size: 0.7rem; font-weight: 600; color: var(--gray-500); white-space: nowrap; }
-        .step-item.active .step-label { color: var(--royal); }
+
+        .step-item.active .step-circle {
+            background: var(--royal);
+            color: white;
+            box-shadow: 0 0 0 4px rgba(13, 71, 161, 0.2);
+        }
+
+        .step-item.done .step-circle {
+            background: var(--green-500);
+            color: white;
+        }
+
+        .step-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--gray-500);
+            white-space: nowrap;
+        }
+
+        .step-item.active .step-label {
+            color: var(--royal);
+        }
+
         .step-connector {
-            width: 4rem; height: 2px;
+            width: 4rem;
+            height: 2px;
             background: var(--gray-200);
             margin-bottom: 1.5rem;
             flex-shrink: 0;
         }
-        .step-connector.done { background: var(--green-500); }
+
+        .step-connector.done {
+            background: var(--green-500);
+        }
 
         /* Step panels */
-        .step { display: none; }
-        .step.active { display: block; }
+        .step {
+            display: none;
+        }
+
+        .step.active {
+            display: block;
+        }
 
         /* Form inputs */
-        .form-label { display: block; font-size: 0.875rem; font-weight: 600; color: var(--gray-700); margin-bottom: 0.5rem; }
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-bottom: 0.5rem;
+        }
+
         .form-input {
             width: 100%;
             padding: 0.75rem 1rem;
@@ -636,15 +1240,34 @@
             font-family: 'DM Sans', sans-serif;
             font-size: 0.95rem;
             color: var(--gray-800);
-            background: rgba(255,255,255,0.5);
+            background: rgba(255, 255, 255, 0.5);
             backdrop-filter: blur(4px);
             outline: none;
             transition: all 0.2s ease;
             -webkit-appearance: none;
         }
-        .form-input:focus { border-color: var(--royal); box-shadow: 0 0 0 3px rgba(13,71,161,0.15); }
-        .form-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2rem; }
-        @media(min-width:768px){ .form-grid { grid-template-columns: 1fr 1fr; } .col-span-2 { grid-column: span 2; } }
+
+        .form-input:focus {
+            border-color: var(--royal);
+            box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.15);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        @media(min-width:768px) {
+            .form-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .col-span-2 {
+                grid-column: span 2;
+            }
+        }
 
         /* Payment box */
         .payment-box {
@@ -656,7 +1279,13 @@
             font-size: 0.875rem;
             color: var(--gray-800);
         }
-        .payment-box h4 { font-weight: 700; color: var(--royal); font-size: 1.1rem; margin-bottom: 0.75rem; }
+
+        .payment-box h4 {
+            font-weight: 700;
+            color: var(--royal);
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
 
         /* ===== DP GENERATOR ===== */
         .dp-layout {
@@ -664,7 +1293,13 @@
             grid-template-columns: 1fr;
             gap: 2rem;
         }
-        @media(min-width:768px){ .dp-layout { grid-template-columns: 1fr 1fr; } }
+
+        @media(min-width:768px) {
+            .dp-layout {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
         .dp-canvas-wrapper {
             position: relative;
             width: 100%;
@@ -674,11 +1309,28 @@
             background: var(--gray-100);
             border: 2px dashed var(--gray-300);
         }
-        #dpCanvas { width: 100%; height: 100%; display: block; cursor: grab; }
-        #dpCanvas:active { cursor: grabbing; }
-        .dp-controls { display: flex; flex-direction: column; gap: 1rem; }
+
+        #dpCanvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+            cursor: grab;
+        }
+
+        #dpCanvas:active {
+            cursor: grabbing;
+        }
+
+        .dp-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
         .dp-upload-label {
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             gap: 0.5rem;
             background: linear-gradient(135deg, var(--royal), var(--royal-light));
             color: white;
@@ -688,10 +1340,31 @@
             font-weight: 600;
             transition: all 0.2s ease;
         }
-        .dp-upload-label:hover { opacity: 0.9; transform: translateY(-1px); }
-        .dp-slider-group label { font-size: 0.8rem; font-weight: 600; color: var(--gray-600); margin-bottom: 0.25rem; display: block; }
-        .dp-slider { width: 100%; accent-color: var(--royal); }
-        .dp-btn-row { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+        .dp-upload-label:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .dp-slider-group label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--gray-600);
+            margin-bottom: 0.25rem;
+            display: block;
+        }
+
+        .dp-slider {
+            width: 100%;
+            accent-color: var(--royal);
+        }
+
+        .dp-btn-row {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
         .dp-btn {
             flex: 1;
             padding: 0.6rem 1rem;
@@ -702,13 +1375,38 @@
             font-weight: 600;
             font-size: 0.85rem;
             transition: all 0.2s ease;
-            display: flex; align-items: center; justify-content: center; gap: 0.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
         }
-        .dp-btn-reset { background: var(--gray-100); color: var(--gray-700); }
-        .dp-btn-reset:hover { background: var(--gray-200); }
-        .dp-btn-gen { background: linear-gradient(135deg, var(--royal), var(--royal-light)); color: white; }
-        .dp-btn-gen:hover { opacity: 0.9; transform: translateY(-1px); }
-        .dp-share-row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem; }
+
+        .dp-btn-reset {
+            background: var(--gray-100);
+            color: var(--gray-700);
+        }
+
+        .dp-btn-reset:hover {
+            background: var(--gray-200);
+        }
+
+        .dp-btn-gen {
+            background: linear-gradient(135deg, var(--royal), var(--royal-light));
+            color: white;
+        }
+
+        .dp-btn-gen:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .dp-share-row {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+
         .share-btn {
             flex: 1;
             min-width: 80px;
@@ -719,13 +1417,33 @@
             font-family: 'DM Sans', sans-serif;
             font-weight: 600;
             font-size: 0.8rem;
-            display: flex; align-items: center; justify-content: center; gap: 0.35rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
             transition: all 0.2s;
         }
-        .share-wa { background: #25D366; color: white; }
-        .share-fb { background: #1877F2; color: white; }
-        .share-li { background: #0A66C2; color: white; }
-        .share-btn:hover { opacity: 0.85; transform: translateY(-1px); }
+
+        .share-wa {
+            background: #25D366;
+            color: white;
+        }
+
+        .share-fb {
+            background: #1877F2;
+            color: white;
+        }
+
+        .share-li {
+            background: #0A66C2;
+            color: white;
+        }
+
+        .share-btn:hover {
+            opacity: 0.85;
+            transform: translateY(-1px);
+        }
+
         .download-btn {
             width: 100%;
             padding: 0.875rem;
@@ -737,28 +1455,64 @@
             font-size: 0.95rem;
             background: linear-gradient(135deg, var(--gold), var(--gold-light));
             color: var(--royal);
-            display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
             transition: all 0.2s;
-            box-shadow: 0 4px 15px rgba(212,175,55,0.3);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
         }
-        .download-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(212,175,55,0.5); }
-        .dp-hint { font-size: 0.78rem; color: var(--gray-500); text-align: center; }
-        #dpDownloadArea { display: none; }
-        #dpDownloadArea.show { display: block; }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+        }
+
+        .dp-hint {
+            font-size: 0.78rem;
+            color: var(--gray-500);
+            text-align: center;
+        }
+
+        #dpDownloadArea {
+            display: none;
+        }
+
+        #dpDownloadArea.show {
+            display: block;
+        }
 
         /* ===== SUCCESS STEP ===== */
-        #step-3 { animation: fadeInUp 0.6s ease; }
-        @keyframes fadeInUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+        #step-3 {
+            animation: fadeInUp 0.6s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .success-icon {
-            width: 6rem; height: 6rem;
+            width: 6rem;
+            height: 6rem;
             background: var(--green-100);
             border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin: 0 auto 1.5rem;
             font-size: 3rem;
             color: var(--green-500);
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
         }
+
         .reg-id-card {
             background: var(--blue-50);
             border: 1px solid var(--blue-100);
@@ -767,9 +1521,31 @@
             max-width: 24rem;
             margin: 0 auto 2rem;
         }
-        .reg-id-label { font-size: 0.75rem; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-bottom: 0.25rem; }
-        .reg-id-value { font-size: 1.5rem; font-weight: 800; color: var(--royal); letter-spacing: 0.05em; }
-        .success-actions { display: flex; gap: 1.25rem; flex-wrap: wrap; justify-content: center; margin-top: 0.5rem; }
+
+        .reg-id-label {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .reg-id-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--royal);
+            letter-spacing: 0.05em;
+        }
+
+        .success-actions {
+            display: flex;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+
         .btn-outline {
             padding: 0.875rem 2rem;
             border-radius: 9999px;
@@ -778,31 +1554,73 @@
             cursor: pointer;
             font-family: 'DM Sans', sans-serif;
             transition: all 0.3s ease;
-            display: inline-flex; align-items: center; gap: 0.6rem;
-            min-width: 160px; justify-content: center;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            min-width: 160px;
+            justify-content: center;
         }
+
         .btn-outline-royal {
             background: white;
             color: var(--royal);
             border: 2.5px solid var(--royal);
-            box-shadow: 0 4px 15px rgba(13,71,161,0.15);
+            box-shadow: 0 4px 15px rgba(13, 71, 161, 0.15);
         }
-        .btn-outline-royal:hover { background: var(--royal); color: white; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(13,71,161,0.3); }
+
+        .btn-outline-royal:hover {
+            background: var(--royal);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(13, 71, 161, 0.3);
+        }
+
         .btn-fill-royal {
             background: linear-gradient(135deg, var(--royal), var(--royal-light));
             color: white;
             border: 2.5px solid transparent;
-            box-shadow: 0 4px 15px rgba(13,71,161,0.3);
-            min-width: 160px; justify-content: center;
+            box-shadow: 0 4px 15px rgba(13, 71, 161, 0.3);
+            min-width: 160px;
+            justify-content: center;
         }
-        .btn-fill-royal:hover { background: linear-gradient(135deg, var(--royal-dark), var(--royal)); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(13,71,161,0.4); }
-        .btn-fill-gold { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--royal); border: none; font-weight: 800; box-shadow: 0 4px 15px rgba(212,175,55,0.3); }
-        .btn-fill-gold:hover { transform: translateY(-2px); }
+
+        .btn-fill-royal:hover {
+            background: linear-gradient(135deg, var(--royal-dark), var(--royal));
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(13, 71, 161, 0.4);
+        }
+
+        .btn-fill-gold {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--royal);
+            border: none;
+            font-weight: 800;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-fill-gold:hover {
+            transform: translateY(-2px);
+        }
 
         /* ===== FAQs ===== */
-        #faqs { background: white; }
-        .faq-list { max-width: 42rem; margin: 2.5rem auto 0; display: flex; flex-direction: column; gap: 1rem; }
-        .faq-item { border: 1px solid var(--gray-200); border-radius: 1rem; overflow: hidden; }
+        #faqs {
+            background: white;
+        }
+
+        .faq-list {
+            max-width: 42rem;
+            margin: 2.5rem auto 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            border: 1px solid var(--gray-200);
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
         .faq-q {
             width: 100%;
             text-align: left;
@@ -819,52 +1637,190 @@
             align-items: center;
             transition: background 0.2s;
         }
-        .faq-q:hover { background: var(--gray-50); }
-        .faq-q i { color: var(--royal); transition: transform 0.3s; }
-        .faq-q.open i { transform: rotate(180deg); }
-        .faq-a { display: none; padding: 0 1.25rem 1.1rem; font-size: 0.9rem; color: var(--gray-600); line-height: 1.7; background: white; }
-        .faq-a.open { display: block; }
+
+        .faq-q:hover {
+            background: var(--gray-50);
+        }
+
+        .faq-q i {
+            color: var(--royal);
+            transition: transform 0.3s;
+        }
+
+        .faq-q.open i {
+            transform: rotate(180deg);
+        }
+
+        .faq-a {
+            display: none;
+            padding: 0 1.25rem 1.1rem;
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            line-height: 1.7;
+            background: white;
+        }
+
+        .faq-a.open {
+            display: block;
+        }
 
         /* ===== CONTACT ===== */
-        #contact { background: var(--gray-50); }
-        .contact-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 2.5rem; }
-        @media(min-width:768px){ .contact-grid { grid-template-columns: 1fr 1fr; } }
+        #contact {
+            background: var(--gray-50);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        @media(min-width:768px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
         .contact-info-card {
             background: white;
             border-radius: 1.25rem;
             padding: 2rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
             border: 1px solid var(--gray-100);
         }
-        .contact-row { display: flex; align-items: flex-start; gap: 0.875rem; margin-bottom: 1rem; }
-        .contact-icon { width: 2.5rem; height: 2.5rem; background: var(--blue-50); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; color: var(--royal); font-size: 1rem; flex-shrink: 0; }
-        .contact-text-label { font-size: 0.75rem; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.05em; }
-        .contact-text-value { font-size: 0.95rem; font-weight: 600; color: var(--gray-800); }
-        .map-wrapper { border-radius: 1.25rem; overflow: hidden; height: 280px; background: var(--gray-200); display: flex; align-items: center; justify-content: center; }
-        .map-placeholder { text-align: center; color: var(--gray-500); }
-        .map-placeholder i { font-size: 3rem; color: var(--royal); margin-bottom: 0.5rem; }
-        .social-row { display: flex; gap: 0.75rem; margin-top: 1.5rem; }
+
+        .contact-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--blue-50);
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--royal);
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .contact-text-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .contact-text-value {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+
+        .map-wrapper {
+            border-radius: 1.25rem;
+            overflow: hidden;
+            height: 280px;
+            background: var(--gray-200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .map-placeholder {
+            text-align: center;
+            color: var(--gray-500);
+        }
+
+        .map-placeholder i {
+            font-size: 3rem;
+            color: var(--royal);
+            margin-bottom: 0.5rem;
+        }
+
+        .social-row {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
         .social-btn {
-            width: 2.75rem; height: 2.75rem;
+            width: 2.75rem;
+            height: 2.75rem;
             border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 1.1rem;
             text-decoration: none;
             transition: transform 0.2s;
         }
-        .social-btn:hover { transform: translateY(-3px); }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+        }
 
         /* ===== FOOTER ===== */
-        #footer { background: #0a0e1a; color: rgba(255,255,255,0.6); padding: 2.5rem 1.5rem; text-align: center; }
-        .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: white; margin-bottom: 0.5rem; }
-        .footer-logo span { color: var(--gold); }
-        .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; margin: 1.25rem 0; }
-        .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
-        .footer-links a:hover { color: var(--gold); }
-        .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.35); }
+        #footer {
+            background: #0a0e1a;
+            color: rgba(255, 255, 255, 0.6);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-logo span {
+            color: var(--gold);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 1.25rem 0;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-copy {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.35);
+        }
 
         /* ===== CONFETTI ===== */
-        #confetti-canvas { position: fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:9999; display:none; }
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            display: none;
+        }
 
         /* ===== TOAST ===== */
         #toast {
@@ -879,35 +1835,92 @@
             font-size: 0.875rem;
             font-weight: 500;
             z-index: 9999;
-            transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
             white-space: nowrap;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
-        #toast.show { transform: translateX(-50%) translateY(0); }
-        #toast.success-toast { background: #166534; }
-        #toast.error-toast { background: #7f1d1d; }
+
+        #toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        #toast.success-toast {
+            background: #166534;
+        }
+
+        #toast.error-toast {
+            background: #7f1d1d;
+        }
 
         /* ===== AOS-like animations ===== */
-        [data-aos] { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
-        [data-aos].aos-animate { opacity: 1; transform: translateY(0); }
+        [data-aos] {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        [data-aos].aos-animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         /* ===== RESPONSIVE ===== */
         @media(max-width:767px) {
-            .nav-links { display: none; }
-            #mobile-menu-btn { display: block; }
-            .welcome-card { padding: 1.75rem; }
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-            .form-card { padding: 1.5rem; }
-            .step-connector { width: 2rem; }
-            .countdown-section-timer { gap: 0.75rem; }
-            .cs-item { min-width: 75px; padding: 1rem 1.25rem; }
-            .cs-number { font-size: 2rem; }
+            .nav-links {
+                display: none;
+            }
+
+            #mobile-menu-btn {
+                display: block;
+            }
+
+            .welcome-card {
+                padding: 1.75rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .form-card {
+                padding: 1.5rem;
+            }
+
+            .step-connector {
+                width: 2rem;
+            }
+
+            .countdown-section-timer {
+                gap: 0.75rem;
+            }
+
+            .cs-item {
+                min-width: 75px;
+                padding: 1rem 1.25rem;
+            }
+
+            .cs-number {
+                font-size: 2rem;
+            }
         }
+
         @media(max-width:480px) {
-            .gallery-grid { grid-template-columns: 1fr 1fr; }
-            .countdown-wrapper { gap: 0.5rem; }
-            .countdown-item { padding: 0.75rem; min-width: 60px; }
-            .countdown-number { font-size: 1.5rem; }
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .countdown-wrapper {
+                gap: 0.5rem;
+            }
+
+            .countdown-item {
+                padding: 0.75rem;
+                min-width: 60px;
+            }
+
+            .countdown-number {
+                font-size: 1.5rem;
+            }
         }
 
         /* ===== Back to top ===== */
@@ -915,7 +1928,8 @@
             position: fixed;
             bottom: 1.5rem;
             right: 1.5rem;
-            width: 3rem; height: 3rem;
+            width: 3rem;
+            height: 3rem;
             background: var(--royal);
             color: white;
             border-radius: 50%;
@@ -925,755 +1939,923 @@
             align-items: center;
             justify-content: center;
             font-size: 1.1rem;
-            box-shadow: 0 4px 20px rgba(13,71,161,0.4);
+            box-shadow: 0 4px 20px rgba(13, 71, 161, 0.4);
             z-index: 200;
             transition: all 0.3s;
         }
-        #back-to-top.show { display: flex; }
-        #back-to-top:hover { transform: translateY(-3px); }
+
+        #back-to-top.show {
+            display: flex;
+        }
+
+        #back-to-top:hover {
+            transform: translateY(-3px);
+        }
     </style>
-  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js" type="text/javascript"></script>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
-  <script src="/_sdk/resizing_sdk.js" type="text/javascript"></script>
- </head>
- <body data-template-id="__page-root"><!-- CANVAS -->
-  <canvas id="confetti-canvas"></canvas>
-  <div id="toast"></div><button id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button> <!-- ===== NAVBAR ===== -->
-  <nav id="navbar" role="navigation" aria-label="Main navigation">
-   <div class="nav-inner"><a href="#hero" class="nav-logo">
-     <img src="Seeds_logo.png" alt="Seeds Logo" class="nav-logo-img"></a>
-    <div class="nav-links"><a href="#welcome" data-template-id="nav-link-welcome" class="canva-link">About</a> <a href="#highlights" data-template-id="nav-link-highlights" class="canva-link">Highlights</a> <a href="#faqs" data-template-id="nav-link-faqs" class="canva-link">FAQs</a> <a href="#contact" data-template-id="nav-link-contact" class="canva-link">Contact</a> <a href="#registration" class="nav-cta" data-template-id="nav-cta">Register Now</a>
-    </div><button id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false"> <i class="fa-solid fa-bars"></i> </button>
-   </div>
-   <div id="mobile-menu" role="menu"><a href="#welcome">About</a> <a href="#highlights">Highlights</a> <a href="#faqs">FAQs</a> <a href="#contact">Contact</a> <a href="#registration" style="color:var(--gold);font-weight:700;">Register Now</a>
-   </div>
-  </nav><!-- ===== HERO ===== -->
-  <section id="hero" aria-label="Hero section"><img id="hero-bg-img" data-template-id="hero-bg-img" class="canva-image" src="Home page.JPG" alt="Einstein College campus">
-   <div class="hero-overlay"></div>
-   <canvas id="particles-canvas"></canvas>
-   <div class="hero-content">
-    <div class="hero-badge" data-template-id="hero-badge"><i class="fa-solid fa-star"></i> <span>Einstein College of Engineering</span>
-    </div>
-    <h1 class="hero-title" data-template-id="hero-title">Alumni <span>Homecoming</span> 2026</h1>
-    <p class="hero-tagline" data-template-id="hero-tagline">Where memories meet milestones. Reconnect, celebrate &amp; inspire.</p>
-    <div class="hero-date-badge"><i class="fa-solid fa-calendar-days"></i> <span data-template-id="hero-date" class="canva-text">July 25, 2026 · 9:00 AM · Einstein College, Tirunelveli</span>
-    </div>
-    <div class="countdown-wrapper" id="hero-countdown" aria-label="Countdown timer">
-     <div class="countdown-item"><span class="countdown-number" id="hc-days">00</span>
-      <div class="countdown-label" data-template-id="hc-days-label">Days</div>
-     </div>
-     <div class="countdown-item"><span class="countdown-number" id="hc-hours">00</span>
-      <div class="countdown-label" data-template-id="hc-hours-label">Hours</div>
-     </div>
-     <div class="countdown-item"><span class="countdown-number" id="hc-mins">00</span>
-      <div class="countdown-label" data-template-id="hc-mins-label">Minutes</div>
-     </div>
-     <div class="countdown-item"><span class="countdown-number" id="hc-secs">00</span>
-      <div class="countdown-label" data-template-id="hc-secs-label">Seconds</div>
-     </div>
-    </div>
-    <div class="hero-cta-group"><a href="#registration" class="btn-primary" data-template-id="hero-cta-primary"> <i class="fa-solid fa-pen-to-square"></i> <span>Register Now</span> </a> <a href="#highlights" class="btn-secondary" data-template-id="hero-cta-secondary"> <i class="fa-solid fa-circle-play"></i> <span>Explore Event</span> </a>
-    </div>
-   </div>
-   <div class="hero-scroll-hint" aria-hidden="true"><span data-template-id="hero-scroll-hint" class="canva-text">Scroll to explore</span> <i class="fa-solid fa-chevron-down"></i>
-   </div>
-  </section><!-- ===== WELCOME ===== -->
-  <section id="welcome" class="section-wrapper" data-aos aria-labelledby="welcome-heading">
-   <div class="max-w-4xl mx-auto text-center">
-    <div class="section-tag" data-template-id="welcome-tag">
-     <i class="fa-solid fa-hand-wave"></i> <span>Welcome</span>
-    </div>
-    <h2 class="section-title" id="welcome-heading" data-template-id="welcome-title">A Reunion Like No Other</h2>
-    <div class="section-divider"></div>
-   </div>
-   <div class="welcome-card" data-aos>
-    <div class="welcome-icon">
-     <i class="fa-solid fa-graduation-cap"></i>
-    </div>
-    <p class="welcome-body text-center" data-template-id="welcome-body-1">Dear Alumni, it's time to relive the golden days of your college life. Alumni Homecoming 2026 is a celebration of the bonds you forged, the lessons you learned, and the dreams you chased — together.</p>
-    <p class="welcome-body text-center" data-template-id="welcome-body-2">Join us for a grand reunion filled with joy, nostalgia, and an opportunity to reconnect with your batchmates, professors, and the campus that shaped you into who you are today.</p>
-    <blockquote class="welcome-quote" data-template-id="welcome-quote">"Once an Einsteinian, always an Einsteinian. Welcome home."</blockquote>
-   </div>
-  </section><!-- ===== HIGHLIGHTS ===== -->
-  <section id="highlights" class="section-wrapper" aria-labelledby="highlights-heading">
-   <div class="max-w-6xl mx-auto text-center">
-    <div class="section-tag" data-template-id="highlights-tag">
-     <i class="fa-solid fa-sparkles"></i> <span>Highlights</span>
-    </div>
-    <h2 class="section-title" id="highlights-heading" data-template-id="highlights-title">What's In Store for You</h2>
-    <p class="section-subtitle" data-template-id="highlights-subtitle">A full day of unforgettable experiences carefully curated for our alumni family.</p>
-    <div class="highlights-grid"><!-- Networking -->
-     <div class="highlight-card" data-template-id="hl-networking" data-aos>
-      <div class="highlight-icon" style="background:rgba(99,102,241,0.15);color:#6366f1;">
-       <i class="fa-solid fa-people-group"></i>
-      </div>
-      <div class="highlight-title" data-template-id="hl-networking-title">Networking</div>
-      <div class="highlight-desc" data-template-id="hl-networking-desc">Connect with alumni from various industries and expand your professional network.</div>
-     </div><!-- Campus Tour -->
-     <div class="highlight-card" data-template-id="hl-campus" data-aos>
-      <div class="highlight-icon" style="background:rgba(16,185,129,0.15);color:#10b981;">
-       <i class="fa-solid fa-building-columns"></i>
-      </div>
-      <div class="highlight-title" data-template-id="hl-campus-title">Campus Tour</div>
-      <div class="highlight-desc" data-template-id="hl-campus-desc">Revisit your favourite spots and witness the new developments on campus.</div>
-     </div><!-- Cultural Events -->
-     <div class="highlight-card" data-template-id="hl-cultural" data-aos>
-      <div class="highlight-icon" style="background:rgba(245,158,11,0.15);color:#f59e0b;">
-       <i class="fa-solid fa-masks-theater"></i>
-      </div>
-      <div class="highlight-title" data-template-id="hl-cultural-title">Cultural Events</div>
-      <div class="highlight-desc" data-template-id="hl-cultural-desc">Live performances, dance shows, and cultural extravaganza by talented alumni.</div>
-     </div><!-- Awards -->
-     <div class="highlight-card" data-template-id="hl-awards" data-aos>
-      <div class="highlight-icon" style="background:rgba(212,175,55,0.15);color:var(--gold);">
-       <i class="fa-solid fa-trophy"></i>
-      </div>
-      <div class="highlight-title" data-template-id="hl-awards-title">Awards Night</div>
-      <div class="highlight-desc" data-template-id="hl-awards-desc">Honouring distinguished alumni for their achievements and contributions.</div>
-     </div><!-- Dinner -->
-     <div class="highlight-card" data-template-id="hl-dinner" data-aos>
-      <div class="highlight-icon" style="background:rgba(239,68,68,0.15);color:#ef4444;">
-       <i class="fa-solid fa-utensils"></i>
-      </div>
-      <div class="highlight-title" data-template-id="hl-dinner-title">Grand Dinner</div>
-      <div class="highlight-desc" data-template-id="hl-dinner-desc">A lavish dinner bringing all alumni together to celebrate over good food.</div>
-     </div><!-- Entertainment -->
-     <div class="highlight-card" data-template-id="hl-entertainment" data-aos>
-      <div class="highlight-icon" style="background:rgba(236,72,153,0.15);color:#ec4899;">
-       <i class="fa-solid fa-music"></i>
-      </div>
-      <div class="highlight-title" data-template-id="hl-entertainment-title">Entertainment</div>
-      <div class="highlight-desc" data-template-id="hl-entertainment-desc">Live music, DJ night, and entertainment to keep the energy high all evening.</div>
-     </div><!-- Dept Meetups -->
-     <div class="highlight-card" data-template-id="hl-dept" data-aos>
-      <div class="highlight-icon" style="background:rgba(13,71,161,0.15);color:var(--royal);">
-       <i class="fa-solid fa-users-gear"></i>
-      </div>
-      <div class="highlight-title" data-template-id="hl-dept-title">Dept. Meetups</div>
-      <div class="highlight-desc" data-template-id="hl-dept-desc">Dedicated gatherings for each department to reconnect with batchmates.</div>
-     </div><!-- Memories -->
-     <div class="highlight-card" data-template-id="hl-memories" data-aos>
-      <div class="highlight-icon" style="background:rgba(139,92,246,0.15);color:#8b5cf6;">
-       <i class="fa-solid fa-camera-retro"></i>
-      </div>
-      <div class="highlight-title" data-template-id="hl-memories-title">Memory Wall</div>
-      <div class="highlight-desc" data-template-id="hl-memories-desc">Share and relive your fondest college memories captured over the decades.</div>
-     </div>
-    </div>
-   </div>
-  </section><!-- ===== COUNTDOWN SECTION ===== -->
-  <section id="countdown-section" class="section-wrapper" aria-label="Event countdown">
-   <div class="countdown-section-inner" data-aos>
-    <div class="section-tag mx-auto" style="display:inline-flex;" data-template-id="cs-tag">
-     <i class="fa-solid fa-clock"></i> <span>Countdown</span>
-    </div>
-    <h2 class="section-title mt-2" data-template-id="cs-title">The Big Day Is Almost Here!</h2>
-    <p class="section-subtitle" data-template-id="cs-subtitle">Mark your calendars. July 25, 2026. Be there.</p>
-    <div class="countdown-section-timer" id="cs-countdown">
-     <div class="cs-item">
-      <div class="cs-number" id="cs-days">
-       00
-      </div>
-      <div class="cs-label" data-template-id="cs-days-label">Days</div>
-     </div>
-     <div class="cs-item">
-      <div class="cs-number" id="cs-hours">
-       00
-      </div>
-      <div class="cs-label" data-template-id="cs-hours-label">Hours</div>
-     </div>
-     <div class="cs-item">
-      <div class="cs-number" id="cs-mins">
-       00
-      </div>
-      <div class="cs-label" data-template-id="cs-mins-label">Minutes</div>
-     </div>
-     <div class="cs-item">
-      <div class="cs-number" id="cs-secs">
-       00
-      </div>
-      <div class="cs-label" data-template-id="cs-secs-label">Seconds</div>
-     </div>
-    </div><a href="#registration" class="btn-primary mx-auto" style="display:inline-flex;" data-template-id="cs-cta"> <i class="fa-solid fa-pen-to-square"></i> <span>Register Now</span> </a>
-   </div>
-  </section><!-- ===== REGISTRATION ===== -->
-  <section id="registration" class="section-wrapper" aria-labelledby="reg-heading">
-   <div class="max-w-6xl mx-auto text-center">
-    <div class="section-tag" data-template-id="reg-tag">
-     <i class="fa-solid fa-user-plus"></i> <span>Registration</span>
-    </div>
-    <h2 class="section-title" id="reg-heading" data-template-id="reg-title">Secure Your Spot</h2>
-    <p class="section-subtitle" data-template-id="reg-subtitle">Complete the form below to confirm your attendance at Alumni Homecoming 2026.</p>
-   </div>
-   <div class="form-card"><!-- Steps Indicator -->
-    <div class="steps-indicator" aria-label="Registration steps">
-     <div class="step-item active" id="si-1">
-      <div class="step-circle">
-       1
-      </div>
-      <div class="step-label" data-template-id="step-label-1">Your Details</div>
-     </div>
-     <div class="step-connector" id="sc-1"></div>
-     <div class="step-item" id="si-2">
-      <div class="step-circle">
-       2
-      </div>
-      <div class="step-label" data-template-id="step-label-2">Create DP</div>
-     </div>
-     <div class="step-connector" id="sc-2"></div>
-     <div class="step-item" id="si-3">
-      <div class="step-circle">
-       3
-      </div>
-      <div class="step-label" data-template-id="step-label-3">Done!</div>
-     </div>
-    </div>
-    <form id="registrationForm" onsubmit="return false;" novalidate><!-- STEP 1 -->
-     <div id="step-1" class="step active">
-      <div class="form-grid">
-       <div><label class="form-label" for="name" data-template-id="label-name">Full Name *</label> <input type="text" id="name" required class="form-input" placeholder="John Doe" autocomplete="name">
-       </div>
-       <div><label class="form-label" for="mobile" data-template-id="label-mobile">Phone Number *</label> <input type="tel" id="mobile" required pattern="[0-9]{10}" class="form-input" placeholder="10-digit number" autocomplete="tel">
-       </div>
-       <div><label class="form-label" for="batch" data-template-id="label-batch">Year of Graduation *</label> <select id="batch" required class="form-input"> <option value="" disabled selected>Select Year</option> </select>
-       </div>
-       <div><label class="form-label" for="course" data-template-id="label-course">Course of Study *</label> <select id="course" required class="form-input"> <option value="" disabled selected>Select Course</option> <option value="B.E - Civil Engineering">B.E - Civil Engineering</option> <option value="B.E - Computer Science and Engineering">B.E - Computer Science and Engineering</option> <option value="B.E - Electronics and Communication Engineering">B.E - Electronics and Communication Engineering</option> <option value="B.E - Electrical and Electronics Engineering">B.E - Electrical and Electronics Engineering</option> <option value="B.E - Mechanical Engineering">B.E - Mechanical Engineering</option> <option value="B.E - Artificial Intelligence">B.E - Artificial Intelligence</option> <option value="Master of Engineering (M.E)">Master of Engineering (M.E)</option> <option value="Master of Business Administration (MBA)">Master of Business Administration (MBA)</option> </select>
-       </div>
-       <div><label class="form-label" for="family" data-template-id="label-family">Will You Bring Your Family Member?</label> <select id="family" class="form-input"> <option value="No" selected>No</option> <option value="Yes">Yes</option> </select>
-       </div>
-       <div><label class="form-label" for="volunteer" data-template-id="label-volunteer">Would you like to volunteer? *</label> <select id="volunteer" required class="form-input"> <option value="" disabled selected>Select an option</option> <option value="Yes">Yes</option> <option value="No">No</option> </select>
-       </div>
-       <div class="col-span-2"><label class="form-label" for="tshirt" data-template-id="label-tshirt">T-Shirt Size *</label> <select id="tshirt" required class="form-input"> <option value="" disabled selected>Select Size</option> <option value="S">S</option> <option value="M">M</option> <option value="L">L</option> <option value="XL">XL</option> <option value="XXL">XXL</option> </select>
-       </div>
-      </div><!-- Payment box -->
-      <div class="payment-box">
-       <h4 data-template-id="payment-title" class="canva-text">Registration Fee &amp; Payment</h4>
-       <p class="mb-2">Please pay via Google Pay to: <strong style="font-size:1.25rem;display:block;margin-top:0.25rem;color:var(--gray-900)" data-template-id="payment-number" class="canva-text">9786286365</strong></p>
-       <p class="mb-4">Name: <strong data-template-id="payment-name" class="canva-text">Manimegala Soundar</strong><br><span class="text-xs" style="color:var(--gray-500)" data-template-id="payment-name-role">Einstein Seeds Alumni Association Member</span></p>
-       <ul class="list-disc pl-5 mb-4 space-y-1">
-        <li data-template-id="payment-fee-1" class="canva-text">Batch 2008–2020: ₹600</li>
-        <li data-template-id="payment-fee-2" class="canva-text">Batch 2021–2026: ₹300</li>
-        <li data-template-id="payment-fee-3" class="canva-text">Family Pass: Additional ₹300 per Adult (Free for Kids)</li>
-       </ul>
-       <p style="color:var(--red-600);font-weight:600;font-style:italic;margin-bottom:1.5rem;" data-template-id="payment-refund-note" class="canva-text">*** Amount will not be refunded. ***</p>
-       <div class="form-grid" style="margin-bottom:0;">
-        <div><label class="form-label" for="paymentScreenshot" data-template-id="label-screenshot">Upload Payment Screenshot * (Max 10MB)</label> <input type="file" id="paymentScreenshot" accept="image/*,application/pdf" required class="form-input" style="padding:0.5rem 1rem;">
-        </div>
-        <div><label class="form-label" for="transactionId" data-template-id="label-txn">Transaction ID</label> <input type="text" id="transactionId" class="form-input" placeholder="Enter Transaction ID (Optional)">
-        </div>
-       </div>
-      </div>
-      <div style="display:flex;justify-content:flex-end;"><button type="button" onclick="goToStep2()" class="btn-primary" data-template-id="btn-next-step2"> <span>Next</span> <i class="fa-solid fa-arrow-right"></i> </button>
-      </div>
-     </div><!-- STEP 2: DP Generator -->
-     <div id="step-2" class="step">
-      <div style="text-align:center;margin-bottom:2rem;">
-       <h3 style="font-size:1.5rem;font-weight:700;color:var(--gray-900);margin-bottom:0.5rem;" data-template-id="dp-heading" class="canva-text"></h3>
-       <p style="color:var(--gray-500);font-size:0.9rem;" data-template-id="dp-subheading" class="canva-text"></p>
-      </div>
-      <div class="dp-layout"><!-- Canvas Preview -->
-       <div>
-        <div class="dp-canvas-wrapper">
-         <canvas id="dpCanvas" width="1080" height="1080"></canvas>
-        </div>
-        <p class="dp-hint" style="margin-top:0.5rem;" data-template-id="dp-canvas-hint"></p>
-       </div><!-- Controls -->
-       <div class="dp-controls">
-        <div><label class="dp-upload-label" for="profilePhoto"> <i class="fa-solid fa-image"></i> <span data-template-id="dp-upload-label" class="canva-text"></span> </label> <input type="file" id="profilePhoto" accept="image/*" style="display:none;">
-        </div>
-        <div class="dp-slider-group"><label data-template-id="dp-zoom-label" class="canva-text"></label> <input type="range" id="zoomSlider" class="dp-slider" min="0.1" max="5" step="0.05" value="1">
-        </div>
-        <div class="dp-slider-group"><label data-template-id="dp-rotate-label" class="canva-text"></label> <input type="range" id="rotateSlider" class="dp-slider" min="-180" max="180" step="1" value="0">
-        </div>
-        <div class="dp-btn-row"><button type="button" class="dp-btn dp-btn-reset" onclick="resetDP()"> <i class="fa-solid fa-rotate-left"></i> <span data-template-id="dp-btn-reset" class="canva-text"></span> </button> <button type="button" class="dp-btn dp-btn-gen" onclick="generateDP()"> <i class="fa-solid fa-wand-magic-sparkles"></i> <span data-template-id="dp-btn-generate" class="canva-text"></span> </button>
-        </div>
-        <div id="dpDownloadArea"><button type="button" class="download-btn" onclick="downloadDP()"> <i class="fa-solid fa-download"></i> <span data-template-id="dp-btn-download" class="canva-text">Download DP</span> </button>
-         <div class="dp-share-row" style="margin-top:0.75rem;"><button type="button" class="share-btn share-wa" onclick="shareWA()"> <i class="fa-brands fa-whatsapp"></i> <span data-template-id="dp-share-wa" class="canva-text"></span> </button> <button type="button" class="share-btn share-fb" onclick="shareFB()"> <i class="fa-brands fa-facebook"></i> <span data-template-id="dp-share-fb" class="canva-text"></span> </button> <button type="button" class="share-btn share-li" onclick="shareLI()"> <i class="fa-brands fa-linkedin"></i> <span data-template-id="dp-share-li" class="canva-text"></span> </button>
-         </div>
-        </div>
-        <p class="dp-hint" data-template-id="dp-skip-hint"></p>
-       </div>
-      </div>
-      <div style="display:flex;justify-content:space-between;margin-top:2rem;gap:1rem;flex-wrap:wrap;"><button type="button" onclick="goToStep1()" class="btn-outline btn-outline-royal" data-template-id="btn-back-step1"> <i class="fa-solid fa-arrow-left"></i> <span>Back</span> </button> <button type="button" onclick="submitForm()" class="btn-primary" data-template-id="btn-submit"> <span>Submit Registration</span> <i class="fa-solid fa-check"></i> </button>
-      </div>
-     </div><!-- STEP 3: Success -->
-     <div id="step-3" class="step" style="text-align:center;padding:2.5rem 0;">
-      <div class="success-icon">
-       <i class="fa-solid fa-check"></i>
-      </div>
-      <h3 style="font-size:clamp(1.5rem,4vw,2.25rem);font-weight:800;color:var(--gray-900);margin-bottom:0.5rem;" data-template-id="success-heading" class="canva-text">You're Registered! 🎉</h3>
-      <p style="color:var(--gray-600);font-size:1.05rem;margin-bottom:2rem;" data-template-id="success-subheading" class="canva-text">Welcome home, Einsteinian! See you on July 25, 2026.</p>
-      <div class="reg-id-card">
-       <div class="reg-id-label" data-template-id="success-id-label">Your Registration ID</div>
-       <div class="reg-id-value" id="displayRegId">
-        AH2026-XXXX
-       </div>
-      </div>
-      <div class="success-actions"><button type="button" onclick="downloadDP()" class="btn-outline btn-outline-royal" data-template-id="success-btn-download"> <i class="fa-solid fa-download"></i> <span>Download DP</span> </button> <button type="button" onclick="goHome()" class="btn-fill-royal" data-template-id="success-btn-home"> <i class="fa-solid fa-house"></i> <span>Back to Home</span> </button>
-      </div>
-     </div>
-    </form>
-   </div>
-  </section><!-- ===== FAQs ===== -->
-  <section id="faqs" class="section-wrapper" aria-labelledby="faqs-heading">
-   <div class="max-w-4xl mx-auto text-center">
-    <div class="section-tag" data-template-id="faqs-tag">
-     <i class="fa-solid fa-circle-question"></i> <span>FAQs</span>
-    </div>
-    <h2 class="section-title" id="faqs-heading" data-template-id="faqs-title">Frequently Asked Questions</h2>
-    <p class="section-subtitle" data-template-id="faqs-subtitle">Everything you need to know about Alumni Homecoming 2026.</p>
-   </div>
-   <div class="faq-list">
-    <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"> <span data-template-id="faq-1-q" class="canva-text">Who can register for Alumni Homecoming 2026?</span> <i class="fa-solid fa-chevron-down"></i> </button>
-     <div class="faq-a" data-template-id="faq-1-a">Any graduate or postgraduate alumnus of Einstein College of Engineering is welcome to register. Whether you passed out recently or decades ago, all Einsteinians are invited to come home!</div>
-    </div>
-    <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"> <span data-template-id="faq-2-q" class="canva-text">What is the registration fee?</span> <i class="fa-solid fa-chevron-down"></i> </button>
-     <div class="faq-a" data-template-id="faq-2-a">The registration fee is ₹600 for batches 2008–2020 and ₹300 for batches 2021–2026. Family members (adults) may be added for an additional ₹300 per person. Entry is free for children.</div>
-    </div>
-    <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"> <span data-template-id="faq-3-q" class="canva-text">Can I bring my family?</span> <i class="fa-solid fa-chevron-down"></i> </button>
-     <div class="faq-a" data-template-id="faq-3-a">Yes! You are welcome to bring your family. Please select "Yes" under the family option during registration and pay the additional ₹300 per adult. Children can attend free of charge.</div>
-    </div>
-    <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"> <span data-template-id="faq-4-q" class="canva-text">How will I receive my registration confirmation?</span> <i class="fa-solid fa-chevron-down"></i> </button>
-     <div class="faq-a" data-template-id="faq-4-a">Once you complete the registration form and submit your payment screenshot, your unique Registration ID will be displayed on screen. Please save it — further details will be shared via WhatsApp or email.</div>
-    </div>
-    <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"> <span data-template-id="faq-5-q" class="canva-text">What is the last date for registration?</span> <i class="fa-solid fa-chevron-down"></i> </button>
-     <div class="faq-a" data-template-id="faq-5-a">Registrations will close on July 20, 2026 or when seats are full — whichever comes first. We encourage you to register early to secure your spot and T-shirt size.</div>
-    </div>
-   </div>
-  </section><!-- ===== CONTACT ===== -->
-  <section id="contact" class="section-wrapper" aria-labelledby="contact-heading">
-   <div class="max-w-6xl mx-auto text-center">
-    <div class="section-tag" data-template-id="contact-tag">
-     <i class="fa-solid fa-envelope"></i> <span>Contact</span>
-    </div>
-    <h2 class="section-title" id="contact-heading" data-template-id="contact-title">Get In Touch</h2>
-    <p class="section-subtitle" data-template-id="contact-subtitle">Have questions? We're here to help. Reach out to the organising committee.</p>
-   </div>
-   <div class="contact-grid max-w-4xl mx-auto">
-    <div class="contact-info-card" data-aos>
-     <div class="contact-row">
-      <div class="contact-icon">
-       <i class="fa-solid fa-location-dot"></i>
-      </div>
-      <div>
-       <div class="contact-text-label" data-template-id="contact-addr-label">Venue</div>
-       <div class="contact-text-value" data-template-id="contact-addr-value">Einstein College of Engineering, Tirunelveli, Tamil Nadu</div>
-      </div>
-     </div>
-     <div class="contact-row">
-      <div class="contact-icon">
-       <i class="fa-solid fa-phone"></i>
-      </div>
-      <div>
-       <div class="contact-text-label" data-template-id="contact-phone-label">Phone</div>
-       <div class="contact-text-value" data-template-id="contact-phone-value">+91 97862 86365</div>
-      </div>
-     </div>
-     <div class="contact-row">
-      <div class="contact-icon">
-       <i class="fa-solid fa-envelope"></i>
-      </div>
-      <div>
-       <div class="contact-text-label" data-template-id="contact-email-label">Email</div>
-       <div class="contact-text-value" data-template-id="contact-email-value">alumni@einsteinengineering.ac.in</div>
-      </div>
-     </div>
-     <div class="contact-row">
-      <div class="contact-icon">
-       <i class="fa-solid fa-clock"></i>
-      </div>
-      <div>
-       <div class="contact-text-label" data-template-id="contact-time-label">Event Date &amp; Time</div>
-       <div class="contact-text-value" data-template-id="contact-time-value">July 25, 2026 · 9:00 AM onwards</div>
-      </div>
-     </div>
-     <div class="social-row"><a href="https://www.instagram.com/einstein_seedsalumni/" target="_blank" rel="noopener noreferrer" class="social-btn" style="background:#E1306C;color:white;" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-     </div>
-    </div>
-    <div class="map-wrapper" data-aos>
-     <div class="map-placeholder"><i class="fa-solid fa-map-pin"></i>
-      <p style="font-weight:600;color:var(--gray-600);font-size:1rem;margin-bottom:0.25rem;" data-template-id="map-label" class="canva-text">Einstein College of Engineering</p>
-      <p style="font-size:0.85rem;" data-template-id="map-sublabel" class="canva-text">Tirunelveli, Tamil Nadu</p>
-     </div>
-    </div>
-   </div>
-  </section><!-- ===== FOOTER ===== -->
-  <footer id="footer" role="contentinfo">
-    <img src="Seeds_logo.png" alt="Seeds Logo" style="height: 3rem; width: auto; object-fit: contain; margin-bottom: 0.5rem;">
-   <p style="font-size:0.9rem;margin-bottom:1rem;" data-template-id="footer-tagline" class="canva-text"></p>
-   <div class="footer-links"><a href="#welcome" data-template-id="footer-link-about" class="canva-link"></a> <a href="#highlights" data-template-id="footer-link-highlights" class="canva-link"></a> <a href="#gallery" data-template-id="footer-link-gallery" class="canva-link"></a> <a href="#registration" data-template-id="footer-link-register" class="canva-link"></a> <a href="#faqs" data-template-id="footer-link-faqs" class="canva-link"></a> <a href="#contact" data-template-id="footer-link-contact" class="canva-link"></a>
-   </div>
-   <p class="footer-copy" data-template-id="footer-copy"></p>
-  </footer>
-  <script>
-// ===== VIEWPORT HEIGHT =====
-function setVH(){document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);}
-setVH();
-window.addEventListener('resize', setVH);
+    <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+    <script src="/_sdk/resizing_sdk.js" type="text/javascript"></script>
+</head>
 
-// ===== NAVBAR SCROLL =====
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-    if(window.scrollY > 60) navbar.classList.add('scrolled');
-    else navbar.classList.remove('scrolled');
-    const btt = document.getElementById('back-to-top');
-    if(window.scrollY > 400) btt.classList.add('show'); else btt.classList.remove('show');
-});
+<body data-template-id="__page-root"><!-- CANVAS -->
+    <canvas id="confetti-canvas"></canvas>
+    <div id="toast"></div><button id="back-to-top" aria-label="Back to top"><i
+            class="fa-solid fa-arrow-up"></i></button> <!-- ===== NAVBAR ===== -->
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner"><a href="#hero" class="nav-logo">
+                <img src="Seeds_logo.png" alt="Seeds Logo" class="nav-logo-img"></a>
+            <div class="nav-links"><a href="#welcome" data-template-id="nav-link-welcome" class="canva-link">About</a>
+                <a href="#highlights" data-template-id="nav-link-highlights" class="canva-link">Highlights</a> <a
+                    href="#faqs" data-template-id="nav-link-faqs" class="canva-link">FAQs</a> <a href="#contact"
+                    data-template-id="nav-link-contact" class="canva-link">Contact</a> <a href="#registration"
+                    class="nav-cta" data-template-id="nav-cta">Register Now</a>
+            </div><button id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false"> <i
+                    class="fa-solid fa-bars"></i> </button>
+        </div>
+        <div id="mobile-menu" role="menu"><a href="#welcome">About</a> <a href="#highlights">Highlights</a> <a
+                href="#faqs">FAQs</a> <a href="#contact">Contact</a> <a href="#registration"
+                style="color:var(--gold);font-weight:700;">Register Now</a>
+        </div>
+    </nav><!-- ===== HERO ===== -->
+    <section id="hero" aria-label="Hero section"><img id="hero-bg-img" data-template-id="hero-bg-img"
+            class="canva-image" src="Home page.JPG" alt="Einstein College campus">
+        <div class="hero-overlay"></div>
+        <canvas id="particles-canvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-badge" data-template-id="hero-badge"><i class="fa-solid fa-star"></i> <span>Einstein
+                    College of Engineering</span>
+            </div>
+            <h1 class="hero-title" data-template-id="hero-title">Alumni <span>Homecoming</span> 2026</h1>
+            <p class="hero-tagline" data-template-id="hero-tagline">Where memories meet milestones. Reconnect, celebrate
+                &amp; inspire.</p>
+            <div class="hero-date-badge"><i class="fa-solid fa-calendar-days"></i> <span data-template-id="hero-date"
+                    class="canva-text">July 25, 2026 · 9:00 AM · Einstein College, Tirunelveli</span>
+            </div>
+            <div class="countdown-wrapper" id="hero-countdown" aria-label="Countdown timer">
+                <div class="countdown-item"><span class="countdown-number" id="hc-days">00</span>
+                    <div class="countdown-label" data-template-id="hc-days-label">Days</div>
+                </div>
+                <div class="countdown-item"><span class="countdown-number" id="hc-hours">00</span>
+                    <div class="countdown-label" data-template-id="hc-hours-label">Hours</div>
+                </div>
+                <div class="countdown-item"><span class="countdown-number" id="hc-mins">00</span>
+                    <div class="countdown-label" data-template-id="hc-mins-label">Minutes</div>
+                </div>
+                <div class="countdown-item"><span class="countdown-number" id="hc-secs">00</span>
+                    <div class="countdown-label" data-template-id="hc-secs-label">Seconds</div>
+                </div>
+            </div>
+            <div class="hero-cta-group"><a href="#registration" class="btn-primary" data-template-id="hero-cta-primary">
+                    <i class="fa-solid fa-pen-to-square"></i> <span>Register Now</span> </a> <a href="#highlights"
+                    class="btn-secondary" data-template-id="hero-cta-secondary"> <i class="fa-solid fa-circle-play"></i>
+                    <span>Explore Event</span> </a>
+            </div>
+        </div>
+        <div class="hero-scroll-hint" aria-hidden="true"><span data-template-id="hero-scroll-hint"
+                class="canva-text">Scroll to explore</span> <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </section><!-- ===== WELCOME ===== -->
+    <section id="welcome" class="section-wrapper" data-aos aria-labelledby="welcome-heading">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="section-tag" data-template-id="welcome-tag">
+                <i class="fa-solid fa-hand-wave"></i> <span>Welcome</span>
+            </div>
+            <h2 class="section-title" id="welcome-heading" data-template-id="welcome-title">A Reunion Like No Other</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="welcome-card" data-aos>
+            <div class="welcome-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <p class="welcome-body text-center" data-template-id="welcome-body-1">Dear Alumni, it's time to relive the
+                golden days of your college life. Alumni Homecoming 2026 is a celebration of the bonds you forged, the
+                lessons you learned, and the dreams you chased — together.</p>
+            <p class="welcome-body text-center" data-template-id="welcome-body-2">Join us for a grand reunion filled
+                with joy, nostalgia, and an opportunity to reconnect with your batchmates, professors, and the campus
+                that shaped you into who you are today.</p>
+            <blockquote class="welcome-quote" data-template-id="welcome-quote">"Once an Einsteinian, always an
+                Einsteinian. Welcome home."</blockquote>
+        </div>
+    </section><!-- ===== HIGHLIGHTS ===== -->
+    <section id="highlights" class="section-wrapper" aria-labelledby="highlights-heading">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="section-tag" data-template-id="highlights-tag">
+                <i class="fa-solid fa-sparkles"></i> <span>Highlights</span>
+            </div>
+            <h2 class="section-title" id="highlights-heading" data-template-id="highlights-title">What's In Store for
+                You</h2>
+            <p class="section-subtitle" data-template-id="highlights-subtitle">A full day of unforgettable experiences
+                carefully curated for our alumni family.</p>
+            <div class="highlights-grid"><!-- Networking -->
+                <div class="highlight-card" data-template-id="hl-networking" data-aos>
+                    <div class="highlight-icon" style="background:rgba(99,102,241,0.15);color:#6366f1;">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <div class="highlight-title" data-template-id="hl-networking-title">Networking</div>
+                    <div class="highlight-desc" data-template-id="hl-networking-desc">Connect with alumni from various
+                        industries and expand your professional network.</div>
+                </div><!-- Campus Tour -->
+                <div class="highlight-card" data-template-id="hl-campus" data-aos>
+                    <div class="highlight-icon" style="background:rgba(16,185,129,0.15);color:#10b981;">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <div class="highlight-title" data-template-id="hl-campus-title">Campus Tour</div>
+                    <div class="highlight-desc" data-template-id="hl-campus-desc">Revisit your favourite spots and
+                        witness the new developments on campus.</div>
+                </div><!-- Cultural Events -->
+                <div class="highlight-card" data-template-id="hl-cultural" data-aos>
+                    <div class="highlight-icon" style="background:rgba(245,158,11,0.15);color:#f59e0b;">
+                        <i class="fa-solid fa-masks-theater"></i>
+                    </div>
+                    <div class="highlight-title" data-template-id="hl-cultural-title">Cultural Events</div>
+                    <div class="highlight-desc" data-template-id="hl-cultural-desc">Live performances, dance shows, and
+                        cultural extravaganza by talented alumni.</div>
+                </div><!-- Awards -->
+                <div class="highlight-card" data-template-id="hl-awards" data-aos>
+                    <div class="highlight-icon" style="background:rgba(212,175,55,0.15);color:var(--gold);">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <div class="highlight-title" data-template-id="hl-awards-title">Awards Night</div>
+                    <div class="highlight-desc" data-template-id="hl-awards-desc">Honouring distinguished alumni for
+                        their achievements and contributions.</div>
+                </div><!-- Dinner -->
+                <div class="highlight-card" data-template-id="hl-dinner" data-aos>
+                    <div class="highlight-icon" style="background:rgba(239,68,68,0.15);color:#ef4444;">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <div class="highlight-title" data-template-id="hl-dinner-title">Grand Dinner</div>
+                    <div class="highlight-desc" data-template-id="hl-dinner-desc">A lavish dinner bringing all alumni
+                        together to celebrate over good food.</div>
+                </div><!-- Entertainment -->
+                <div class="highlight-card" data-template-id="hl-entertainment" data-aos>
+                    <div class="highlight-icon" style="background:rgba(236,72,153,0.15);color:#ec4899;">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+                    <div class="highlight-title" data-template-id="hl-entertainment-title">Entertainment</div>
+                    <div class="highlight-desc" data-template-id="hl-entertainment-desc">Live music, DJ night, and
+                        entertainment to keep the energy high all evening.</div>
+                </div><!-- Dept Meetups -->
+                <div class="highlight-card" data-template-id="hl-dept" data-aos>
+                    <div class="highlight-icon" style="background:rgba(13,71,161,0.15);color:var(--royal);">
+                        <i class="fa-solid fa-users-gear"></i>
+                    </div>
+                    <div class="highlight-title" data-template-id="hl-dept-title">Dept. Meetups</div>
+                    <div class="highlight-desc" data-template-id="hl-dept-desc">Dedicated gatherings for each department
+                        to reconnect with batchmates.</div>
+                </div><!-- Memories -->
+                <div class="highlight-card" data-template-id="hl-memories" data-aos>
+                    <div class="highlight-icon" style="background:rgba(139,92,246,0.15);color:#8b5cf6;">
+                        <i class="fa-solid fa-camera-retro"></i>
+                    </div>
+                    <div class="highlight-title" data-template-id="hl-memories-title">Memory Wall</div>
+                    <div class="highlight-desc" data-template-id="hl-memories-desc">Share and relive your fondest
+                        college memories captured over the decades.</div>
+                </div>
+            </div>
+        </div>
+    </section><!-- ===== COUNTDOWN SECTION ===== -->
+    <section id="countdown-section" class="section-wrapper" aria-label="Event countdown">
+        <div class="countdown-section-inner" data-aos>
+            <div class="section-tag mx-auto" style="display:inline-flex;" data-template-id="cs-tag">
+                <i class="fa-solid fa-clock"></i> <span>Countdown</span>
+            </div>
+            <h2 class="section-title mt-2" data-template-id="cs-title">The Big Day Is Almost Here!</h2>
+            <p class="section-subtitle" data-template-id="cs-subtitle">Mark your calendars. July 25, 2026. Be there.</p>
+            <div class="countdown-section-timer" id="cs-countdown">
+                <div class="cs-item">
+                    <div class="cs-number" id="cs-days">
+                        00
+                    </div>
+                    <div class="cs-label" data-template-id="cs-days-label">Days</div>
+                </div>
+                <div class="cs-item">
+                    <div class="cs-number" id="cs-hours">
+                        00
+                    </div>
+                    <div class="cs-label" data-template-id="cs-hours-label">Hours</div>
+                </div>
+                <div class="cs-item">
+                    <div class="cs-number" id="cs-mins">
+                        00
+                    </div>
+                    <div class="cs-label" data-template-id="cs-mins-label">Minutes</div>
+                </div>
+                <div class="cs-item">
+                    <div class="cs-number" id="cs-secs">
+                        00
+                    </div>
+                    <div class="cs-label" data-template-id="cs-secs-label">Seconds</div>
+                </div>
+            </div><a href="#registration" class="btn-primary mx-auto" style="display:inline-flex;"
+                data-template-id="cs-cta"> <i class="fa-solid fa-pen-to-square"></i> <span>Register Now</span> </a>
+        </div>
+    </section><!-- ===== REGISTRATION ===== -->
+    <section id="registration" class="section-wrapper" aria-labelledby="reg-heading">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="section-tag" data-template-id="reg-tag">
+                <i class="fa-solid fa-user-plus"></i> <span>Registration</span>
+            </div>
+            <h2 class="section-title" id="reg-heading" data-template-id="reg-title">Secure Your Spot</h2>
+            <p class="section-subtitle" data-template-id="reg-subtitle">Complete the form below to confirm your
+                attendance at Alumni Homecoming 2026.</p>
+        </div>
+        <div class="form-card"><!-- Steps Indicator -->
+            <div class="steps-indicator" aria-label="Registration steps">
+                <div class="step-item active" id="si-1">
+                    <div class="step-circle">
+                        1
+                    </div>
+                    <div class="step-label" data-template-id="step-label-1">Your Details</div>
+                </div>
+                <div class="step-connector" id="sc-1"></div>
+                <div class="step-item" id="si-2">
+                    <div class="step-circle">
+                        2
+                    </div>
+                    <div class="step-label" data-template-id="step-label-2">Create DP</div>
+                </div>
+                <div class="step-connector" id="sc-2"></div>
+                <div class="step-item" id="si-3">
+                    <div class="step-circle">
+                        3
+                    </div>
+                    <div class="step-label" data-template-id="step-label-3">Done!</div>
+                </div>
+            </div>
+            <form id="registrationForm" onsubmit="return false;" novalidate><!-- STEP 1 -->
+                <div id="step-1" class="step active">
+                    <div class="form-grid">
+                        <div><label class="form-label" for="name" data-template-id="label-name">Full Name *</label>
+                            <input type="text" id="name" required class="form-input" placeholder="John Doe"
+                                autocomplete="name">
+                        </div>
+                        <div><label class="form-label" for="mobile" data-template-id="label-mobile">Phone Number
+                                *</label> <input type="tel" id="mobile" required pattern="[0-9]{10}" class="form-input"
+                                placeholder="10-digit number" autocomplete="tel">
+                        </div>
+                        <div><label class="form-label" for="batch" data-template-id="label-batch">Year of Graduation
+                                *</label> <select id="batch" required class="form-input">
+                                <option value="" disabled selected>Select Year</option>
+                            </select>
+                        </div>
+                        <div><label class="form-label" for="course" data-template-id="label-course">Course of Study
+                                *</label> <select id="course" required class="form-input">
+                                <option value="" disabled selected>Select Course</option>
+                                <option value="B.E - Civil Engineering">B.E - Civil Engineering</option>
+                                <option value="B.E - Computer Science and Engineering">B.E - Computer Science and
+                                    Engineering</option>
+                                <option value="B.E - Electronics and Communication Engineering">B.E - Electronics and
+                                    Communication Engineering</option>
+                                <option value="B.E - Electrical and Electronics Engineering">B.E - Electrical and
+                                    Electronics Engineering</option>
+                                <option value="B.E - Mechanical Engineering">B.E - Mechanical Engineering</option>
+                                <option value="B.E - Artificial Intelligence">B.E - Artificial Intelligence</option>
+                                <option value="Master of Engineering (M.E)">Master of Engineering (M.E)</option>
+                                <option value="Master of Business Administration (MBA)">Master of Business
+                                    Administration (MBA)</option>
+                            </select>
+                        </div>
+                        <div><label class="form-label" for="family" data-template-id="label-family">Will You Bring Your
+                                Family Member?</label> <select id="family" class="form-input">
+                                <option value="No" selected>No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                        <div><label class="form-label" for="volunteer" data-template-id="label-volunteer">Would you like
+                                to volunteer? *</label> <select id="volunteer" required class="form-input">
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                        <div class="col-span-2"><label class="form-label" for="tshirt"
+                                data-template-id="label-tshirt">T-Shirt Size *</label> <select id="tshirt" required
+                                class="form-input">
+                                <option value="" disabled selected>Select Size</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                    </div><!-- Payment box -->
+                    <div class="payment-box">
+                        <h4 data-template-id="payment-title" class="canva-text">Registration Fee &amp; Payment</h4>
+                        <p class="mb-2">Please pay via Google Pay to: <strong
+                                style="font-size:1.25rem;display:block;margin-top:0.25rem;color:var(--gray-900)"
+                                data-template-id="payment-number" class="canva-text">9786286365</strong></p>
+                        <p class="mb-4">Name: <strong data-template-id="payment-name" class="canva-text">Manimegala
+                                Soundar</strong><br><span class="text-xs" style="color:var(--gray-500)"
+                                data-template-id="payment-name-role">Einstein Seeds Alumni Association Member</span></p>
+                        <ul class="list-disc pl-5 mb-4 space-y-1">
+                            <li data-template-id="payment-fee-1" class="canva-text">Batch 2008–2020: ₹600</li>
+                            <li data-template-id="payment-fee-2" class="canva-text">Batch 2021–2026: ₹300</li>
+                            <li data-template-id="payment-fee-3" class="canva-text">Family Pass: Additional ₹300 per
+                                Adult (Free for Kids)</li>
+                        </ul>
+                        <p style="color:var(--red-600);font-weight:600;font-style:italic;margin-bottom:1.5rem;"
+                            data-template-id="payment-refund-note" class="canva-text">*** Amount will not be refunded.
+                            ***</p>
+                        <div class="form-grid" style="margin-bottom:0;">
+                            <div><label class="form-label" for="paymentScreenshot"
+                                    data-template-id="label-screenshot">Upload Payment Screenshot * (Max 10MB)</label>
+                                <input type="file" id="paymentScreenshot" accept="image/*,application/pdf" required
+                                    class="form-input" style="padding:0.5rem 1rem;">
+                            </div>
+                            <div><label class="form-label" for="transactionId" data-template-id="label-txn">Transaction
+                                    ID</label> <input type="text" id="transactionId" class="form-input"
+                                    placeholder="Enter Transaction ID (Optional)">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display:flex;justify-content:flex-end;"><button type="button" onclick="goToStep2()"
+                            class="btn-primary" data-template-id="btn-next-step2"> <span>Next</span> <i
+                                class="fa-solid fa-arrow-right"></i> </button>
+                    </div>
+                </div><!-- STEP 2: DP Generator -->
+                <div id="step-2" class="step">
+                    <div style="text-align:center;margin-bottom:2rem;">
+                        <h3 style="font-size:1.5rem;font-weight:700;color:var(--gray-900);margin-bottom:0.5rem;"
+                            data-template-id="dp-heading" class="canva-text"></h3>
+                        <p style="color:var(--gray-500);font-size:0.9rem;" data-template-id="dp-subheading"
+                            class="canva-text"></p>
+                    </div>
+                    <div class="dp-layout"><!-- Canvas Preview -->
+                        <div>
+                            <div class="dp-canvas-wrapper">
+                                <canvas id="dpCanvas" width="1080" height="1080"></canvas>
+                            </div>
+                            <p class="dp-hint" style="margin-top:0.5rem;" data-template-id="dp-canvas-hint"></p>
+                        </div><!-- Controls -->
+                        <div class="dp-controls">
+                            <div><label class="dp-upload-label" for="profilePhoto"> <i class="fa-solid fa-image"></i>
+                                    <span data-template-id="dp-upload-label" class="canva-text"></span> </label> <input
+                                    type="file" id="profilePhoto" accept="image/*" style="display:none;">
+                            </div>
+                            <div class="dp-slider-group"><label data-template-id="dp-zoom-label"
+                                    class="canva-text"></label> <input type="range" id="zoomSlider" class="dp-slider"
+                                    min="0.1" max="5" step="0.05" value="1">
+                            </div>
+                            <div class="dp-slider-group"><label data-template-id="dp-rotate-label"
+                                    class="canva-text"></label> <input type="range" id="rotateSlider" class="dp-slider"
+                                    min="-180" max="180" step="1" value="0">
+                            </div>
+                            <div class="dp-btn-row"><button type="button" class="dp-btn dp-btn-reset"
+                                    onclick="resetDP()"> <i class="fa-solid fa-rotate-left"></i> <span
+                                        data-template-id="dp-btn-reset" class="canva-text"></span> </button> <button
+                                    type="button" class="dp-btn dp-btn-gen" onclick="generateDP()"> <i
+                                        class="fa-solid fa-wand-magic-sparkles"></i> <span
+                                        data-template-id="dp-btn-generate" class="canva-text"></span> </button>
+                            </div>
+                            <div id="dpDownloadArea"><button type="button" class="download-btn" onclick="downloadDP()">
+                                    <i class="fa-solid fa-download"></i> <span data-template-id="dp-btn-download"
+                                        class="canva-text">Download DP</span> </button>
+                                <div class="dp-share-row" style="margin-top:0.75rem;"><button type="button"
+                                        class="share-btn share-wa" onclick="shareWA()"> <i
+                                            class="fa-brands fa-whatsapp"></i> <span data-template-id="dp-share-wa"
+                                            class="canva-text"></span> </button> <button type="button"
+                                        class="share-btn share-fb" onclick="shareFB()"> <i
+                                            class="fa-brands fa-facebook"></i> <span data-template-id="dp-share-fb"
+                                            class="canva-text"></span> </button> <button type="button"
+                                        class="share-btn share-li" onclick="shareLI()"> <i
+                                            class="fa-brands fa-linkedin"></i> <span data-template-id="dp-share-li"
+                                            class="canva-text"></span> </button>
+                                </div>
+                            </div>
+                            <p class="dp-hint" data-template-id="dp-skip-hint"></p>
+                        </div>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;margin-top:2rem;gap:1rem;flex-wrap:wrap;">
+                        <button type="button" onclick="goToStep1()" class="btn-outline btn-outline-royal"
+                            data-template-id="btn-back-step1"> <i class="fa-solid fa-arrow-left"></i> <span>Back</span>
+                        </button> <button type="button" onclick="submitForm()" class="btn-primary"
+                            data-template-id="btn-submit"> <span>Submit Registration</span> <i
+                                class="fa-solid fa-check"></i> </button>
+                    </div>
+                </div><!-- STEP 3: Success -->
+                <div id="step-3" class="step" style="text-align:center;padding:2.5rem 0;">
+                    <div class="success-icon">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h3 style="font-size:clamp(1.5rem,4vw,2.25rem);font-weight:800;color:var(--gray-900);margin-bottom:0.5rem;"
+                        data-template-id="success-heading" class="canva-text">You're Registered! 🎉</h3>
+                    <p style="color:var(--gray-600);font-size:1.05rem;margin-bottom:2rem;"
+                        data-template-id="success-subheading" class="canva-text">Welcome home, Einsteinian! See you on
+                        July 25, 2026.</p>
+                    <div class="reg-id-card">
+                        <div class="reg-id-label" data-template-id="success-id-label">Your Registration ID</div>
+                        <div class="reg-id-value" id="displayRegId">
+                            AH2026-XXXX
+                        </div>
+                    </div>
+                    <div class="success-actions"><button type="button" onclick="downloadDP()"
+                            class="btn-outline btn-outline-royal" data-template-id="success-btn-download"> <i
+                                class="fa-solid fa-download"></i> <span>Download DP</span> </button> <button
+                            type="button" onclick="goHome()" class="btn-fill-royal" data-template-id="success-btn-home">
+                            <i class="fa-solid fa-house"></i> <span>Back to Home</span> </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section><!-- ===== FAQs ===== -->
+    <section id="faqs" class="section-wrapper" aria-labelledby="faqs-heading">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="section-tag" data-template-id="faqs-tag">
+                <i class="fa-solid fa-circle-question"></i> <span>FAQs</span>
+            </div>
+            <h2 class="section-title" id="faqs-heading" data-template-id="faqs-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle" data-template-id="faqs-subtitle">Everything you need to know about Alumni
+                Homecoming 2026.</p>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"> <span
+                        data-template-id="faq-1-q" class="canva-text">Who can register for Alumni Homecoming
+                        2026?</span> <i class="fa-solid fa-chevron-down"></i> </button>
+                <div class="faq-a" data-template-id="faq-1-a">Any graduate or postgraduate alumnus of Einstein College
+                    of Engineering is welcome to register. Whether you passed out recently or decades ago, all
+                    Einsteinians are invited to come home!</div>
+            </div>
+            <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"> <span
+                        data-template-id="faq-2-q" class="canva-text">What is the registration fee?</span> <i
+                        class="fa-solid fa-chevron-down"></i> </button>
+                <div class="faq-a" data-template-id="faq-2-a">The registration fee is ₹600 for batches 2008–2020 and
+                    ₹300 for batches 2021–2026. Family members (adults) may be added for an additional ₹300 per person.
+                    Entry is free for children.</div>
+            </div>
+            <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"> <span
+                        data-template-id="faq-3-q" class="canva-text">Can I bring my family?</span> <i
+                        class="fa-solid fa-chevron-down"></i> </button>
+                <div class="faq-a" data-template-id="faq-3-a">Yes! You are welcome to bring your family. Please select
+                    "Yes" under the family option during registration and pay the additional ₹300 per adult. Children
+                    can attend free of charge.</div>
+            </div>
+            <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"> <span
+                        data-template-id="faq-4-q" class="canva-text">How will I receive my registration
+                        confirmation?</span> <i class="fa-solid fa-chevron-down"></i> </button>
+                <div class="faq-a" data-template-id="faq-4-a">Once you complete the registration form and submit your
+                    payment screenshot, your unique Registration ID will be displayed on screen. Please save it —
+                    further details will be shared via WhatsApp or email.</div>
+            </div>
+            <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"> <span
+                        data-template-id="faq-5-q" class="canva-text">What is the last date for registration?</span> <i
+                        class="fa-solid fa-chevron-down"></i> </button>
+                <div class="faq-a" data-template-id="faq-5-a">Registrations will close on July 20, 2026 or when seats
+                    are full — whichever comes first. We encourage you to register early to secure your spot and T-shirt
+                    size.</div>
+            </div>
+        </div>
+    </section><!-- ===== CONTACT ===== -->
+    <section id="contact" class="section-wrapper" aria-labelledby="contact-heading">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="section-tag" data-template-id="contact-tag">
+                <i class="fa-solid fa-envelope"></i> <span>Contact</span>
+            </div>
+            <h2 class="section-title" id="contact-heading" data-template-id="contact-title">Get In Touch</h2>
+            <p class="section-subtitle" data-template-id="contact-subtitle">Have questions? We're here to help. Reach
+                out to the organising committee.</p>
+        </div>
+        <div class="contact-grid max-w-4xl mx-auto">
+            <div class="contact-info-card" data-aos>
+                <div class="contact-row">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <div class="contact-text-label" data-template-id="contact-addr-label">Venue</div>
+                        <div class="contact-text-value" data-template-id="contact-addr-value">Einstein College of
+                            Engineering, Tirunelveli, Tamil Nadu</div>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <div class="contact-text-label" data-template-id="contact-phone-label">Phone</div>
+                        <div class="contact-text-value" data-template-id="contact-phone-value">+91 97862 86365</div>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <div class="contact-text-label" data-template-id="contact-email-label">Email</div>
+                        <div class="contact-text-value" data-template-id="contact-email-value">
+                            alumni@einsteinengineering.ac.in</div>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div>
+                        <div class="contact-text-label" data-template-id="contact-time-label">Event Date &amp; Time
+                        </div>
+                        <div class="contact-text-value" data-template-id="contact-time-value">July 25, 2026 · 9:00 AM
+                            onwards</div>
+                    </div>
+                </div>
+                <div class="social-row"><a href="https://www.instagram.com/einstein_seedsalumni/" target="_blank"
+                        rel="noopener noreferrer" class="social-btn" style="background:#E1306C;color:white;"
+                        aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="map-wrapper" data-aos>
+                <div class="map-placeholder"><i class="fa-solid fa-map-pin"></i>
+                    <p style="font-weight:600;color:var(--gray-600);font-size:1rem;margin-bottom:0.25rem;"
+                        data-template-id="map-label" class="canva-text">Einstein College of Engineering</p>
+                    <p style="font-size:0.85rem;" data-template-id="map-sublabel" class="canva-text">Tirunelveli, Tamil
+                        Nadu</p>
+                </div>
+            </div>
+        </div>
+    </section><!-- ===== FOOTER ===== -->
+    <footer id="footer" role="contentinfo">
+        <img src="Seeds_logo.png" alt="Seeds Logo"
+            style="height: 3rem; width: auto; object-fit: contain; margin-bottom: 0.5rem;">
+        <p style="font-size:0.9rem;margin-bottom:1rem;" data-template-id="footer-tagline" class="canva-text"></p>
+        <div class="footer-links"><a href="#welcome" data-template-id="footer-link-about" class="canva-link"></a> <a
+                href="#highlights" data-template-id="footer-link-highlights" class="canva-link"></a> <a href="#gallery"
+                data-template-id="footer-link-gallery" class="canva-link"></a> <a href="#registration"
+                data-template-id="footer-link-register" class="canva-link"></a> <a href="#faqs"
+                data-template-id="footer-link-faqs" class="canva-link"></a> <a href="#contact"
+                data-template-id="footer-link-contact" class="canva-link"></a>
+        </div>
+        <p class="footer-copy" data-template-id="footer-copy"></p>
+    </footer>
+    <script>
+        // ===== VIEWPORT HEIGHT =====
+        function setVH() { document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`); }
+        setVH();
+        window.addEventListener('resize', setVH);
 
-// ===== MOBILE MENU =====
-const mBtn = document.getElementById('mobile-menu-btn');
-const mMenu = document.getElementById('mobile-menu');
-mBtn.addEventListener('click', () => {
-    const open = mMenu.classList.toggle('open');
-    mBtn.setAttribute('aria-expanded', open);
-    mBtn.querySelector('i').className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
-});
-mMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    mMenu.classList.remove('open');
-    mBtn.setAttribute('aria-expanded', 'false');
-    mBtn.querySelector('i').className = 'fa-solid fa-bars';
-}));
-
-// ===== BACK TO TOP =====
-document.getElementById('back-to-top').addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
-
-// ===== PARTICLES =====
-(function(){
-    const canvas = document.getElementById('particles-canvas');
-    const ctx = canvas.getContext('2d');
-    let particles = [];
-    function resize(){ canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; }
-    resize();
-    window.addEventListener('resize', resize);
-    for(let i=0;i<80;i++) particles.push({
-        x: Math.random()*canvas.width,
-        y: Math.random()*canvas.height,
-        r: Math.random()*2+0.5,
-        dx: (Math.random()-0.5)*0.4,
-        dy: (Math.random()-0.5)*0.4,
-        alpha: Math.random()*0.5+0.1
-    });
-    function animate(){
-        ctx.clearRect(0,0,canvas.width,canvas.height);
-        particles.forEach(p=>{
-            ctx.beginPath();
-            ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-            ctx.fillStyle=`rgba(212,175,55,${p.alpha})`;
-            ctx.fill();
-            p.x+=p.dx; p.y+=p.dy;
-            if(p.x<0||p.x>canvas.width) p.dx*=-1;
-            if(p.y<0||p.y>canvas.height) p.dy*=-1;
+        // ===== NAVBAR SCROLL =====
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+            const btt = document.getElementById('back-to-top');
+            if (window.scrollY > 400) btt.classList.add('show'); else btt.classList.remove('show');
         });
-        requestAnimationFrame(animate);
-    }
-    animate();
-})();
 
-// ===== BATCH YEARS =====
-const batchSel = document.getElementById('batch');
-for(let i=2026;i>=1980;i--){
-    const o=document.createElement('option'); o.value=i; o.textContent=i; batchSel.appendChild(o);
-}
-
-// ===== COUNTDOWN =====
-const EVENT_DATE = new Date('2026-07-25T09:00:00');
-function updateCountdown(){
-    const now=new Date(), diff=EVENT_DATE-now;
-    if(diff<=0){ ['hc-days','hc-hours','hc-mins','hc-secs','cs-days','cs-hours','cs-mins','cs-secs'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent='00';}); return; }
-    const d=Math.floor(diff/86400000), h=Math.floor((diff%86400000)/3600000), m=Math.floor((diff%3600000)/60000), s=Math.floor((diff%60000)/1000);
-    const pad=n=>String(n).padStart(2,'0');
-    ['hc-days','cs-days'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=pad(d);});
-    ['hc-hours','cs-hours'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=pad(h);});
-    ['hc-mins','cs-mins'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=pad(m);});
-    ['hc-secs','cs-secs'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=pad(s);});
-}
-updateCountdown();
-setInterval(updateCountdown,1000);
-
-// ===== STATS COUNTER =====
-const statsTargets = { 'stat-alumni':500, 'stat-depts':8, 'stat-batches':46, 'stat-years':25 };
-function animateCounter(id, target){
-    const el=document.getElementById(id); if(!el) return;
-    let current=0; const step=Math.ceil(target/60);
-    const interval=setInterval(()=>{ current=Math.min(current+step,target); el.textContent=current; if(current>=target)clearInterval(interval); },30);
-}
-let statsAnimated=false;
-const statsSection=document.getElementById('stats');
-const statsObserver=new IntersectionObserver(entries=>{
-    if(entries[0].isIntersecting && !statsAnimated){
-        statsAnimated=true;
-        Object.entries(statsTargets).forEach(([id,t])=>animateCounter(id,t));
-    }
-},{threshold:0.3});
-if(statsSection) statsObserver.observe(statsSection);
-
-// ===== AOS =====
-const aosEls=document.querySelectorAll('[data-aos]');
-const aosObserver=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('aos-animate'); });
-},{threshold:0.1});
-aosEls.forEach(el=>aosObserver.observe(el));
-
-// ===== FAQ =====
-function toggleFaq(btn){
-    const isOpen=btn.classList.toggle('open');
-    btn.setAttribute('aria-expanded',isOpen);
-    const ans=btn.nextElementSibling;
-    if(isOpen) ans.classList.add('open'); else ans.classList.remove('open');
-}
-
-// ===== FORM STEPS =====
-function showToast(msg, type=''){
-    const t=document.getElementById('toast');
-    t.textContent=msg; t.className=type?`${type}-toast show`:'show';
-    setTimeout(()=>t.classList.remove('show','success-toast','error-toast'),3500);
-}
-
-function setStepUI(activeStep){
-    document.querySelectorAll('.step').forEach((s,i)=>{
-        s.classList.toggle('active', i+1===activeStep);
-    });
-    [1,2,3].forEach(n=>{
-        const si=document.getElementById(`si-${n}`);
-        if(!si)return;
-        si.classList.toggle('active', n===activeStep);
-        si.classList.toggle('done', n<activeStep);
-    });
-    [1,2].forEach(n=>{
-        const sc=document.getElementById(`sc-${n}`);
-        if(!sc)return;
-        sc.classList.toggle('done', n<activeStep);
-    });
-}
-
-function goToStep2(){
-    const name=document.getElementById('name').value.trim();
-    const mobile=document.getElementById('mobile').value.trim();
-    const batch=document.getElementById('batch').value;
-    const course=document.getElementById('course').value;
-    const volunteer=document.getElementById('volunteer').value;
-    const tshirt=document.getElementById('tshirt').value;
-    const screenshot=document.getElementById('paymentScreenshot').files[0];
-    if(!name){ showToast('Please enter your full name.','error'); return; }
-    if(!/^[0-9]{10}$/.test(mobile)){ showToast('Please enter a valid 10-digit mobile number.','error'); return; }
-    if(!batch){ showToast('Please select your graduation year.','error'); return; }
-    if(!course){ showToast('Please select your course.','error'); return; }
-    if(!volunteer){ showToast('Please select volunteer preference.','error'); return; }
-    if(!tshirt){ showToast('Please select your T-shirt size.','error'); return; }
-    if(!screenshot){ showToast('Please upload your payment screenshot.','error'); return; }
-    if(screenshot.size > 10*1024*1024){ showToast('File size must be under 10MB.','error'); return; }
-    setStepUI(2);
-    window.scrollTo({top: document.getElementById('registration').offsetTop - 80, behavior:'smooth'});
-}
-
-function goToStep1(){ setStepUI(1); }
-
-function submitForm(){
-    const regId = 'AH2026-' + Math.random().toString(36).substr(2,6).toUpperCase();
-    const displayEl = document.getElementById('displayRegId');
-    if(displayEl) displayEl.textContent = regId;
-
-    const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyJqE7mtEAwnN9_juL05n2D6iQ5vsJ4xDo_EY-nc0Qkmx6iO9XCtdaF3ZN_sI2RjNZm/exec';
-
-    const screenshotFile = document.getElementById('paymentScreenshot').files[0];
-
-    const baseData = {
-        regId:         regId,
-        name:          document.getElementById('name').value.trim(),
-        mobile:        document.getElementById('mobile').value.trim(),
-        batch:         document.getElementById('batch').value,
-        course:        document.getElementById('course').value,
-        family:        document.getElementById('family').value,
-        volunteer:     document.getElementById('volunteer').value,
-        tshirt:        document.getElementById('tshirt').value,
-        transactionId: document.getElementById('transactionId').value.trim()
-    };
-
-    if (dpImage) {
-        baseData.dpImage = dpCanvas.toDataURL('image/png').split(',')[1];
-        baseData.dpName = regId + '_DP.png';
-        baseData.dpMimeType = 'image/png';
-    }
-
-    function sendPayload(payload) {
-        console.log('Attempting to send payload to Google Apps Script...', {
-            regId: payload.regId,
-            name: payload.name,
-            hasScreenshot: !!payload.screenshot,
-            hasDpImage: !!payload.dpImage
+        // ===== MOBILE MENU =====
+        const mBtn = document.getElementById('mobile-menu-btn');
+        const mMenu = document.getElementById('mobile-menu');
+        mBtn.addEventListener('click', () => {
+            const open = mMenu.classList.toggle('open');
+            mBtn.setAttribute('aria-expanded', open);
+            mBtn.querySelector('i').className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
         });
-        fetch(SHEET_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            body: JSON.stringify(payload)
-        })
-        .then(response => {
-            console.log('Fetch completed. Response status (0 is normal for no-cors):', response.status);
-        })
-        .catch(err => {
-            console.error('Fetch failed with error:', err);
-            showToast('Submission failed. Check console for details.', 'error');
+        mMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+            mMenu.classList.remove('open');
+            mBtn.setAttribute('aria-expanded', 'false');
+            mBtn.querySelector('i').className = 'fa-solid fa-bars';
+        }));
+
+        // ===== BACK TO TOP =====
+        document.getElementById('back-to-top').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // ===== PARTICLES =====
+        (function () {
+            const canvas = document.getElementById('particles-canvas');
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+            function resize() { canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; }
+            resize();
+            window.addEventListener('resize', resize);
+            for (let i = 0; i < 80; i++) particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                r: Math.random() * 2 + 0.5,
+                dx: (Math.random() - 0.5) * 0.4,
+                dy: (Math.random() - 0.5) * 0.4,
+                alpha: Math.random() * 0.5 + 0.1
+            });
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(212,175,55,${p.alpha})`;
+                    ctx.fill();
+                    p.x += p.dx; p.y += p.dy;
+                    if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+                    if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+                });
+                requestAnimationFrame(animate);
+            }
+            animate();
+        })();
+
+        // ===== BATCH YEARS =====
+        const batchSel = document.getElementById('batch');
+        for (let i = 2026; i >= 2008; i--) {
+            const o = document.createElement('option'); o.value = i; o.textContent = i; batchSel.appendChild(o);
+        }
+
+        // ===== COUNTDOWN =====
+        const EVENT_DATE = new Date('2026-07-25T09:00:00');
+        function updateCountdown() {
+            const now = new Date(), diff = EVENT_DATE - now;
+            if (diff <= 0) { ['hc-days', 'hc-hours', 'hc-mins', 'hc-secs', 'cs-days', 'cs-hours', 'cs-mins', 'cs-secs'].forEach(id => { const el = document.getElementById(id); if (el) el.textContent = '00'; }); return; }
+            const d = Math.floor(diff / 86400000), h = Math.floor((diff % 86400000) / 3600000), m = Math.floor((diff % 3600000) / 60000), s = Math.floor((diff % 60000) / 1000);
+            const pad = n => String(n).padStart(2, '0');
+            ['hc-days', 'cs-days'].forEach(id => { const el = document.getElementById(id); if (el) el.textContent = pad(d); });
+            ['hc-hours', 'cs-hours'].forEach(id => { const el = document.getElementById(id); if (el) el.textContent = pad(h); });
+            ['hc-mins', 'cs-mins'].forEach(id => { const el = document.getElementById(id); if (el) el.textContent = pad(m); });
+            ['hc-secs', 'cs-secs'].forEach(id => { const el = document.getElementById(id); if (el) el.textContent = pad(s); });
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // ===== STATS COUNTER =====
+        const statsTargets = { 'stat-alumni': 500, 'stat-depts': 8, 'stat-batches': 46, 'stat-years': 25 };
+        function animateCounter(id, target) {
+            const el = document.getElementById(id); if (!el) return;
+            let current = 0; const step = Math.ceil(target / 60);
+            const interval = setInterval(() => { current = Math.min(current + step, target); el.textContent = current; if (current >= target) clearInterval(interval); }, 30);
+        }
+        let statsAnimated = false;
+        const statsSection = document.getElementById('stats');
+        const statsObserver = new IntersectionObserver(entries => {
+            if (entries[0].isIntersecting && !statsAnimated) {
+                statsAnimated = true;
+                Object.entries(statsTargets).forEach(([id, t]) => animateCounter(id, t));
+            }
+        }, { threshold: 0.3 });
+        if (statsSection) statsObserver.observe(statsSection);
+
+        // ===== AOS =====
+        const aosEls = document.querySelectorAll('[data-aos]');
+        const aosObserver = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('aos-animate'); });
+        }, { threshold: 0.1 });
+        aosEls.forEach(el => aosObserver.observe(el));
+
+        // ===== FAQ =====
+        function toggleFaq(btn) {
+            const isOpen = btn.classList.toggle('open');
+            btn.setAttribute('aria-expanded', isOpen);
+            const ans = btn.nextElementSibling;
+            if (isOpen) ans.classList.add('open'); else ans.classList.remove('open');
+        }
+
+        // ===== FORM STEPS =====
+        function showToast(msg, type = '') {
+            const t = document.getElementById('toast');
+            t.textContent = msg; t.className = type ? `${type}-toast show` : 'show';
+            setTimeout(() => t.classList.remove('show', 'success-toast', 'error-toast'), 3500);
+        }
+
+        function setStepUI(activeStep) {
+            document.querySelectorAll('.step').forEach((s, i) => {
+                s.classList.toggle('active', i + 1 === activeStep);
+            });
+            [1, 2, 3].forEach(n => {
+                const si = document.getElementById(`si-${n}`);
+                if (!si) return;
+                si.classList.toggle('active', n === activeStep);
+                si.classList.toggle('done', n < activeStep);
+            });
+            [1, 2].forEach(n => {
+                const sc = document.getElementById(`sc-${n}`);
+                if (!sc) return;
+                sc.classList.toggle('done', n < activeStep);
+            });
+        }
+
+        function goToStep2() {
+            const name = document.getElementById('name').value.trim();
+            const mobile = document.getElementById('mobile').value.trim();
+            const batch = document.getElementById('batch').value;
+            const course = document.getElementById('course').value;
+            const volunteer = document.getElementById('volunteer').value;
+            const tshirt = document.getElementById('tshirt').value;
+            const screenshot = document.getElementById('paymentScreenshot').files[0];
+            if (!name) { showToast('Please enter your full name.', 'error'); return; }
+            if (!/^[0-9]{10}$/.test(mobile)) { showToast('Please enter a valid 10-digit mobile number.', 'error'); return; }
+            if (!batch) { showToast('Please select your graduation year.', 'error'); return; }
+            if (!course) { showToast('Please select your course.', 'error'); return; }
+            if (!volunteer) { showToast('Please select volunteer preference.', 'error'); return; }
+            if (!tshirt) { showToast('Please select your T-shirt size.', 'error'); return; }
+            if (!screenshot) { showToast('Please upload your payment screenshot.', 'error'); return; }
+            if (screenshot.size > 10 * 1024 * 1024) { showToast('File size must be under 10MB.', 'error'); return; }
+            setStepUI(2);
+            window.scrollTo({ top: document.getElementById('registration').offsetTop - 80, behavior: 'smooth' });
+        }
+
+        function goToStep1() { setStepUI(1); }
+
+        function submitForm() {
+            const regId = 'AH2026-' + Math.random().toString(36).substr(2, 6).toUpperCase();
+            const displayEl = document.getElementById('displayRegId');
+            if (displayEl) displayEl.textContent = regId;
+
+            const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyJqE7mtEAwnN9_juL05n2D6iQ5vsJ4xDo_EY-nc0Qkmx6iO9XCtdaF3ZN_sI2RjNZm/exec';
+
+            const screenshotFile = document.getElementById('paymentScreenshot').files[0];
+
+            const baseData = {
+                regId: regId,
+                name: document.getElementById('name').value.trim(),
+                mobile: document.getElementById('mobile').value.trim(),
+                batch: document.getElementById('batch').value,
+                course: document.getElementById('course').value,
+                family: document.getElementById('family').value,
+                volunteer: document.getElementById('volunteer').value,
+                tshirt: document.getElementById('tshirt').value,
+                transactionId: document.getElementById('transactionId').value.trim()
+            };
+
+            if (dpImage) {
+                baseData.dpImage = dpCanvas.toDataURL('image/png').split(',')[1];
+                baseData.dpName = regId + '_DP.png';
+                baseData.dpMimeType = 'image/png';
+            }
+
+            function sendPayload(payload) {
+                console.log('Attempting to send payload to Google Apps Script...', {
+                    regId: payload.regId,
+                    name: payload.name,
+                    hasScreenshot: !!payload.screenshot,
+                    hasDpImage: !!payload.dpImage
+                });
+                fetch(SHEET_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: JSON.stringify(payload)
+                })
+                    .then(response => {
+                        console.log('Fetch completed. Response status (0 is normal for no-cors):', response.status);
+                    })
+                    .catch(err => {
+                        console.error('Fetch failed with error:', err);
+                        showToast('Submission failed. Check console for details.', 'error');
+                    });
+            }
+
+            if (screenshotFile) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const base64Data = e.target.result.split(',')[1];
+                    sendPayload(Object.assign({}, baseData, {
+                        screenshot: base64Data,
+                        screenshotName: screenshotFile.name,
+                        screenshotMimeType: screenshotFile.type
+                    }));
+                };
+                reader.readAsDataURL(screenshotFile);
+            } else {
+                sendPayload(baseData);
+            }
+
+            // Proceed to success screen immediately
+            setStepUI(3);
+            launchConfetti();
+            window.scrollTo({ top: document.getElementById('registration').offsetTop - 80, behavior: 'smooth' });
+            showToast('Registration Successful! 🎉', 'success');
+        }
+
+        function goHome() {
+            setStepUI(1);
+            document.getElementById('registrationForm').reset();
+            resetDP();
+            document.getElementById('dpDownloadArea').classList.remove('show');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ===== DP GENERATOR =====
+        const dpCanvas = document.getElementById('dpCanvas');
+        const dpCtx = dpCanvas.getContext('2d');
+        let dpImage = null, dpZoom = 1, dpRotate = 0, dpOffsetX = 0, dpOffsetY = 0;
+        let isDragging = false, dragStartX = 0, dragStartY = 0, lastOffsetX = 0, lastOffsetY = 0;
+
+        // Preload the frame image
+        const dpFrameImg = new Image();
+        dpFrameImg.src = 'frame.png';
+        dpFrameImg.onload = function () { renderDP(); };
+
+        function renderDP() {
+            const w = dpCanvas.width, h = dpCanvas.height;
+            dpCtx.clearRect(0, 0, w, h);
+
+            // 1. Draw user photo (behind frame)
+            if (dpImage) {
+                dpCtx.save();
+                dpCtx.translate(w / 2 + dpOffsetX, h / 2 + dpOffsetY);
+                dpCtx.rotate(dpRotate * Math.PI / 180);
+                dpCtx.scale(dpZoom, dpZoom);
+                dpCtx.drawImage(dpImage, -dpImage.width / 2, -dpImage.height / 2);
+                dpCtx.restore();
+            } else {
+                // Placeholder when no photo uploaded
+                dpCtx.fillStyle = '#1a2a4a';
+                dpCtx.fillRect(0, 0, w, h);
+                dpCtx.fillStyle = 'rgba(255,255,255,0.25)';
+                dpCtx.font = `${w * 0.04}px DM Sans, sans-serif`;
+                dpCtx.textAlign = 'center';
+                dpCtx.textBaseline = 'middle';
+                dpCtx.fillText('Upload your photo', w / 2, h / 2);
+            }
+
+            // 2. Draw frame on top
+            if (dpFrameImg.complete && dpFrameImg.naturalWidth > 0) {
+                dpCtx.drawImage(dpFrameImg, 0, 0, w, h);
+            }
+        }
+
+        document.getElementById('profilePhoto').addEventListener('change', function () {
+            const file = this.files[0]; if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const img = new Image();
+                img.onload = function () {
+                    dpImage = img;
+                    // Fit photo to fill the canvas
+                    dpZoom = Math.max(dpCanvas.width / img.width, dpCanvas.height / img.height);
+                    document.getElementById('zoomSlider').value = dpZoom;
+                    document.getElementById('zoomSlider').min = dpZoom * 0.5;
+                    dpOffsetX = 0; dpOffsetY = 0; dpRotate = 0;
+                    document.getElementById('rotateSlider').value = 0;
+                    renderDP();
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
         });
-    }
 
-    if (screenshotFile) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            const base64Data = e.target.result.split(',')[1];
-            sendPayload(Object.assign({}, baseData, {
-                screenshot: base64Data,
-                screenshotName: screenshotFile.name,
-                screenshotMimeType: screenshotFile.type
-            }));
-        };
-        reader.readAsDataURL(screenshotFile);
-    } else {
-        sendPayload(baseData);
-    }
+        document.getElementById('zoomSlider').addEventListener('input', function () { dpZoom = parseFloat(this.value); renderDP(); });
+        document.getElementById('rotateSlider').addEventListener('input', function () { dpRotate = parseFloat(this.value); renderDP(); });
 
-    // Proceed to success screen immediately
-    setStepUI(3);
-    launchConfetti();
-    window.scrollTo({top: document.getElementById('registration').offsetTop - 80, behavior:'smooth'});
-    showToast('Registration Successful! 🎉','success');
-}
+        // Drag
+        dpCanvas.addEventListener('mousedown', e => { isDragging = true; dragStartX = e.clientX; dragStartY = e.clientY; lastOffsetX = dpOffsetX; lastOffsetY = dpOffsetY; });
+        window.addEventListener('mousemove', e => { if (!isDragging) return; const rect = dpCanvas.getBoundingClientRect(); const scale = dpCanvas.width / rect.width; dpOffsetX = lastOffsetX + (e.clientX - dragStartX) * scale; dpOffsetY = lastOffsetY + (e.clientY - dragStartY) * scale; renderDP(); });
+        window.addEventListener('mouseup', () => { isDragging = false; });
+        dpCanvas.addEventListener('touchstart', e => { e.preventDefault(); const t = e.touches[0]; isDragging = true; dragStartX = t.clientX; dragStartY = t.clientY; lastOffsetX = dpOffsetX; lastOffsetY = dpOffsetY; }, { passive: false });
+        window.addEventListener('touchmove', e => { if (!isDragging) return; const t = e.touches[0]; const rect = dpCanvas.getBoundingClientRect(); const scale = dpCanvas.width / rect.width; dpOffsetX = lastOffsetX + (t.clientX - dragStartX) * scale; dpOffsetY = lastOffsetY + (t.clientY - dragStartY) * scale; renderDP(); }, { passive: true });
+        window.addEventListener('touchend', () => { isDragging = false; });
 
-function goHome(){
-    setStepUI(1);
-    document.getElementById('registrationForm').reset();
-    resetDP();
-    document.getElementById('dpDownloadArea').classList.remove('show');
-    window.scrollTo({top:0,behavior:'smooth'});
-}
-
-// ===== DP GENERATOR =====
-const dpCanvas = document.getElementById('dpCanvas');
-const dpCtx = dpCanvas.getContext('2d');
-let dpImage = null, dpZoom = 1, dpRotate = 0, dpOffsetX = 0, dpOffsetY = 0;
-let isDragging = false, dragStartX = 0, dragStartY = 0, lastOffsetX = 0, lastOffsetY = 0;
-
-// Preload the frame image
-const dpFrameImg = new Image();
-dpFrameImg.src = 'frame.png';
-dpFrameImg.onload = function(){ renderDP(); };
-
-function renderDP(){
-    const w = dpCanvas.width, h = dpCanvas.height;
-    dpCtx.clearRect(0, 0, w, h);
-
-    // 1. Draw user photo (behind frame)
-    if(dpImage){
-        dpCtx.save();
-        dpCtx.translate(w/2 + dpOffsetX, h/2 + dpOffsetY);
-        dpCtx.rotate(dpRotate * Math.PI/180);
-        dpCtx.scale(dpZoom, dpZoom);
-        dpCtx.drawImage(dpImage, -dpImage.width/2, -dpImage.height/2);
-        dpCtx.restore();
-    } else {
-        // Placeholder when no photo uploaded
-        dpCtx.fillStyle = '#1a2a4a';
-        dpCtx.fillRect(0, 0, w, h);
-        dpCtx.fillStyle = 'rgba(255,255,255,0.25)';
-        dpCtx.font = `${w*0.04}px DM Sans, sans-serif`;
-        dpCtx.textAlign = 'center';
-        dpCtx.textBaseline = 'middle';
-        dpCtx.fillText('Upload your photo', w/2, h/2);
-    }
-
-    // 2. Draw frame on top
-    if(dpFrameImg.complete && dpFrameImg.naturalWidth > 0){
-        dpCtx.drawImage(dpFrameImg, 0, 0, w, h);
-    }
-}
-
-document.getElementById('profilePhoto').addEventListener('change', function(){
-    const file = this.files[0]; if(!file) return;
-    const reader = new FileReader();
-    reader.onload = function(e){
-        const img = new Image();
-        img.onload = function(){
-            dpImage = img;
-            // Fit photo to fill the canvas
-            dpZoom = Math.max(dpCanvas.width / img.width, dpCanvas.height / img.height);
-            document.getElementById('zoomSlider').value = dpZoom;
-            document.getElementById('zoomSlider').min = dpZoom * 0.5;
-            dpOffsetX = 0; dpOffsetY = 0; dpRotate = 0;
+        function resetDP() {
+            dpImage = null; dpZoom = 1; dpRotate = 0; dpOffsetX = 0; dpOffsetY = 0;
+            document.getElementById('zoomSlider').value = 1;
             document.getElementById('rotateSlider').value = 0;
+            document.getElementById('profilePhoto').value = '';
             renderDP();
-        };
-        img.src = e.target.result;
-    };
-    reader.readAsDataURL(file);
-});
+        }
 
-document.getElementById('zoomSlider').addEventListener('input', function(){ dpZoom = parseFloat(this.value); renderDP(); });
-document.getElementById('rotateSlider').addEventListener('input', function(){ dpRotate = parseFloat(this.value); renderDP(); });
+        function generateDP() {
+            renderDP();
+            document.getElementById('dpDownloadArea').classList.add('show');
+            showToast('DP generated! Ready to download.', 'success');
+        }
 
-// Drag
-dpCanvas.addEventListener('mousedown', e=>{ isDragging=true; dragStartX=e.clientX; dragStartY=e.clientY; lastOffsetX=dpOffsetX; lastOffsetY=dpOffsetY; });
-window.addEventListener('mousemove', e=>{ if(!isDragging) return; const rect=dpCanvas.getBoundingClientRect(); const scale=dpCanvas.width/rect.width; dpOffsetX=lastOffsetX+(e.clientX-dragStartX)*scale; dpOffsetY=lastOffsetY+(e.clientY-dragStartY)*scale; renderDP(); });
-window.addEventListener('mouseup', ()=>{ isDragging=false; });
-dpCanvas.addEventListener('touchstart', e=>{ e.preventDefault(); const t=e.touches[0]; isDragging=true; dragStartX=t.clientX; dragStartY=t.clientY; lastOffsetX=dpOffsetX; lastOffsetY=dpOffsetY; },{passive:false});
-window.addEventListener('touchmove', e=>{ if(!isDragging) return; const t=e.touches[0]; const rect=dpCanvas.getBoundingClientRect(); const scale=dpCanvas.width/rect.width; dpOffsetX=lastOffsetX+(t.clientX-dragStartX)*scale; dpOffsetY=lastOffsetY+(t.clientY-dragStartY)*scale; renderDP(); },{passive:true});
-window.addEventListener('touchend', ()=>{ isDragging=false; });
+        let dpDataURL = null;
+        function downloadDP() {
+            renderDP();
+            dpDataURL = dpCanvas.toDataURL('image/png');
+            const a = document.createElement('a');
+            a.download = 'AlumniHomecoming2026-DP.png';
+            a.href = dpDataURL;
+            a.click();
+        }
 
-function resetDP(){
-    dpImage=null; dpZoom=1; dpRotate=0; dpOffsetX=0; dpOffsetY=0;
-    document.getElementById('zoomSlider').value=1;
-    document.getElementById('rotateSlider').value=0;
-    document.getElementById('profilePhoto').value='';
-    renderDP();
-}
+        function shareWA() { window.open('https://wa.me/?text=' + encodeURIComponent('I just registered for Alumni Homecoming 2026! 🎓 #AlumniHomecoming2026'), '_blank'); }
+        function shareFB() { window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank'); }
+        function shareLI() { window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(window.location.href), '_blank'); }
 
-function generateDP(){
-    renderDP();
-    document.getElementById('dpDownloadArea').classList.add('show');
-    showToast('DP generated! Ready to download.','success');
-}
+        // ===== CONFETTI =====
+        function launchConfetti() {
+            const canvas = document.getElementById('confetti-canvas');
+            canvas.style.display = 'block';
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+            const pieces = [];
+            const colors = ['#D4AF37', '#0D47A1', '#ffffff', '#22c55e', '#ec4899', '#f59e0b'];
+            for (let i = 0; i < 150; i++) pieces.push({ x: Math.random() * canvas.width, y: -10 - Math.random() * canvas.height * 0.5, w: 8 + Math.random() * 8, h: 4 + Math.random() * 4, color: colors[Math.floor(Math.random() * colors.length)], rot: Math.random() * 360, drot: (Math.random() - 0.5) * 8, dy: 2 + Math.random() * 4, dx: (Math.random() - 0.5) * 3, alpha: 1 });
+            let frame = 0;
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                pieces.forEach(p => {
+                    ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot * Math.PI / 180);
+                    ctx.globalAlpha = p.alpha;
+                    ctx.fillStyle = p.color;
+                    ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+                    ctx.restore();
+                    p.y += p.dy; p.x += p.dx; p.rot += p.drot;
+                    if (frame > 120) p.alpha = Math.max(0, p.alpha - 0.015);
+                });
+                frame++;
+                if (frame < 200) requestAnimationFrame(draw);
+                else { ctx.clearRect(0, 0, canvas.width, canvas.height); canvas.style.display = 'none'; }
+            }
+            draw();
+        }
+    </script>
+    <script src="/_sdk/editing_sdk.js"></script>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'a11a830655f32447',t:'MTc4MjQ1OTA4MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
 
-let dpDataURL = null;
-function downloadDP(){
-    renderDP();
-    dpDataURL = dpCanvas.toDataURL('image/png');
-    const a=document.createElement('a');
-    a.download='AlumniHomecoming2026-DP.png';
-    a.href=dpDataURL;
-    a.click();
-}
-
-function shareWA(){ window.open('https://wa.me/?text=' + encodeURIComponent('I just registered for Alumni Homecoming 2026! 🎓 #AlumniHomecoming2026'), '_blank'); }
-function shareFB(){ window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank'); }
-function shareLI(){ window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(window.location.href), '_blank'); }
-
-// ===== CONFETTI =====
-function launchConfetti(){
-    const canvas=document.getElementById('confetti-canvas');
-    canvas.style.display='block';
-    const ctx=canvas.getContext('2d');
-    canvas.width=window.innerWidth; canvas.height=window.innerHeight;
-    const pieces=[];
-    const colors=['#D4AF37','#0D47A1','#ffffff','#22c55e','#ec4899','#f59e0b'];
-    for(let i=0;i<150;i++) pieces.push({x:Math.random()*canvas.width,y:-10-Math.random()*canvas.height*0.5,w:8+Math.random()*8,h:4+Math.random()*4,color:colors[Math.floor(Math.random()*colors.length)],rot:Math.random()*360,drot:(Math.random()-0.5)*8,dy:2+Math.random()*4,dx:(Math.random()-0.5)*3,alpha:1});
-    let frame=0;
-    function draw(){
-        ctx.clearRect(0,0,canvas.width,canvas.height);
-        pieces.forEach(p=>{
-            ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.rot*Math.PI/180);
-            ctx.globalAlpha=p.alpha;
-            ctx.fillStyle=p.color;
-            ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);
-            ctx.restore();
-            p.y+=p.dy; p.x+=p.dx; p.rot+=p.drot;
-            if(frame>120) p.alpha=Math.max(0,p.alpha-0.015);
-        });
-        frame++;
-        if(frame<200) requestAnimationFrame(draw);
-        else { ctx.clearRect(0,0,canvas.width,canvas.height); canvas.style.display='none'; }
-    }
-    draw();
-}
-</script>
-  <script src="/_sdk/editing_sdk.js"></script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a11a830655f32447',t:'MTc4MjQ1OTA4MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
