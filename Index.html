@@ -1478,42 +1478,24 @@ function submitForm(){
 
     const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyMijgzHIJT318q2ofblcuyTr9S772_LJ9YNok5dzcTOYyIpzuj13q9rcdArwS3tWDq/exec';
 
-    const baseParams = {
-        regId:         regId,
-        name:          document.getElementById('name').value.trim(),
-        mobile:        document.getElementById('mobile').value.trim(),
-        batch:         document.getElementById('batch').value,
-        course:        document.getElementById('course').value,
-        family:        document.getElementById('family').value,
-        volunteer:     document.getElementById('volunteer').value,
-        tshirt:        document.getElementById('tshirt').value,
-        transactionId: document.getElementById('transactionId').value.trim()
-    };
-
     const screenshotFile = document.getElementById('paymentScreenshot').files[0];
 
-    function sendToSheet(extraParams) {
-        const params = new URLSearchParams(Object.assign({}, baseParams, extraParams));
-        fetch(SHEET_URL + '?' + params.toString(), { method: 'GET', mode: 'no-cors' })
-            .catch(err => console.warn('Sheet error:', err));
-    }
+    // Build FormData — Apps Script doPost reads this via e.parameters + e.files
+    const fd = new FormData();
+    fd.append('regId',         regId);
+    fd.append('name',          document.getElementById('name').value.trim());
+    fd.append('mobile',        document.getElementById('mobile').value.trim());
+    fd.append('batch',         document.getElementById('batch').value);
+    fd.append('course',        document.getElementById('course').value);
+    fd.append('family',        document.getElementById('family').value);
+    fd.append('volunteer',     document.getElementById('volunteer').value);
+    fd.append('tshirt',        document.getElementById('tshirt').value);
+    fd.append('transactionId', document.getElementById('transactionId').value.trim());
+    if(screenshotFile) fd.append('screenshot', screenshotFile, screenshotFile.name);
 
-    if (screenshotFile) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            // Strip the base64 header (e.g. "data:image/jpeg;base64,")
-            const base64Full = e.target.result;
-            const base64Data = base64Full.split(',')[1];
-            sendToSheet({
-                fileData: base64Data,
-                fileName: screenshotFile.name,
-                fileType: screenshotFile.type
-            });
-        };
-        reader.readAsDataURL(screenshotFile);
-    } else {
-        sendToSheet({});
-    }
+    // Send as no-cors POST — Apps Script handles multipart FormData via doPost
+    fetch(SHEET_URL, { method: 'POST', body: fd, mode: 'no-cors' })
+        .catch(err => console.warn('Sheet error:', err));
 
     // Proceed to success screen immediately
     setStepUI(3);
