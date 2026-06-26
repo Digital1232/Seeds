@@ -1488,26 +1488,63 @@ function submitForm(){
     const displayEl = document.getElementById('displayRegId');
     if(displayEl) displayEl.textContent = regId;
 
-    const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyMijgzHIJT318q2ofblcuyTr9S772_LJ9YNok5dzcTOYyIpzuj13q9rcdArwS3tWDq/exec';
+    const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyJqE7mtEAwnN9_juL05n2D6iQ5vsJ4xDo_EY-nc0Qkmx6iO9XCtdaF3ZN_sI2RjNZm/exec';
 
     const screenshotFile = document.getElementById('paymentScreenshot').files[0];
 
-    // Build FormData — Apps Script doPost reads this via e.parameters + e.files
-    const fd = new FormData();
-    fd.append('regId',         regId);
-    fd.append('name',          document.getElementById('name').value.trim());
-    fd.append('mobile',        document.getElementById('mobile').value.trim());
-    fd.append('batch',         document.getElementById('batch').value);
-    fd.append('course',        document.getElementById('course').value);
-    fd.append('family',        document.getElementById('family').value);
-    fd.append('volunteer',     document.getElementById('volunteer').value);
-    fd.append('tshirt',        document.getElementById('tshirt').value);
-    fd.append('transactionId', document.getElementById('transactionId').value.trim());
-    if(screenshotFile) fd.append('screenshot', screenshotFile, screenshotFile.name);
+    const baseData = {
+        regId:         regId,
+        name:          document.getElementById('name').value.trim(),
+        mobile:        document.getElementById('mobile').value.trim(),
+        batch:         document.getElementById('batch').value,
+        course:        document.getElementById('course').value,
+        family:        document.getElementById('family').value,
+        volunteer:     document.getElementById('volunteer').value,
+        tshirt:        document.getElementById('tshirt').value,
+        transactionId: document.getElementById('transactionId').value.trim()
+    };
 
-    // Send as no-cors POST — Apps Script handles multipart FormData via doPost
-    fetch(SHEET_URL, { method: 'POST', body: fd, mode: 'no-cors' })
-        .catch(err => console.warn('Sheet error:', err));
+    if (dpImage) {
+        baseData.dpImage = dpCanvas.toDataURL('image/png').split(',')[1];
+        baseData.dpName = regId + '_DP.png';
+        baseData.dpMimeType = 'image/png';
+    }
+
+    function sendPayload(payload) {
+        console.log('Attempting to send payload to Google Apps Script...', {
+            regId: payload.regId,
+            name: payload.name,
+            hasScreenshot: !!payload.screenshot,
+            hasDpImage: !!payload.dpImage
+        });
+        fetch(SHEET_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: JSON.stringify(payload)
+        })
+        .then(response => {
+            console.log('Fetch completed. Response status (0 is normal for no-cors):', response.status);
+        })
+        .catch(err => {
+            console.error('Fetch failed with error:', err);
+            showToast('Submission failed. Check console for details.', 'error');
+        });
+    }
+
+    if (screenshotFile) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const base64Data = e.target.result.split(',')[1];
+            sendPayload(Object.assign({}, baseData, {
+                screenshot: base64Data,
+                screenshotName: screenshotFile.name,
+                screenshotMimeType: screenshotFile.type
+            }));
+        };
+        reader.readAsDataURL(screenshotFile);
+    } else {
+        sendPayload(baseData);
+    }
 
     // Proceed to success screen immediately
     setStepUI(3);
